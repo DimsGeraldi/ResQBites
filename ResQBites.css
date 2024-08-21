@@ -148,41 +148,13 @@
     border-color: none;
 }
 
-.main-container-image1 {
-    flex: 0 0 auto;
-    margin-top: 37px;
-}
-
-.image-1 {
-    box-sizing: border-box;
-    display: block;
-    width: 39px;
-    max-width: initial;
-    height: 39px;
-}
-
-.main-container-image2 {
-    box-sizing: border-box;
-    min-width: 360px;
-    padding-right: 21px;
-    padding-left: -10px;
-    padding-top: 15px;
-}
-
-.image-2 {
-    box-sizing: border-box;
-    display: block;
-    width: 15px;
-    max-width: initial;
-    height: 15px;
-}
-
-.main-container-image3 {
+.main-container-image {
     display: block;
     flex: 0 0 auto;
     max-width: initial;
     height: 215px;
-    margin-top: -50px;
+    margin-top: 30px;
+    margin-left: -20px;
 }
 
 .main-container-layout {
@@ -224,7 +196,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    font: italic 600 8px "Poppins", sans-serif;
+    font: italic 600 12px "Poppins", sans-serif;
     color: #435334;
     text-align: center;
     letter-spacing: 2.48px;
@@ -315,7 +287,7 @@
     padding: 0;
     margin: 0;
     margin-top: 3px;
-    font: 900 12px "Poppins", sans-serif;
+    font: 500 12px "Poppins", sans-serif;
     color: #435334;
     text-align: left;
     white-space: pre-wrap;
@@ -375,7 +347,7 @@
     flex: 0 0 auto;
     padding: 0;
     margin: 0;
-    font: italic 600 8px Poppins, sans-serif;
+    font: italic 600 12px Poppins, sans-serif;
     color: #435334;
     text-align: center;
     letter-spacing: 2.48px;
@@ -398,14 +370,8 @@
 
 .background-image1 {
     flex: 0 0 auto;
-    margin-top: 20px;
-    margin-left: -22px;
-}
-
-.background-image2 {
-   flex: 0 0 auto;
-   margin-top: -550px;
-   margin-left: 290px; 
+    margin-top: 5px;
+    margin-left: -20px;
 }
 
 .solution-section-content {
@@ -516,7 +482,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    font: italic 600 8px Poppins, sans-serif;
+    font: italic 600 12px Poppins, sans-serif;
     color: #435334;
     text-align: center;
     letter-spacing: 2.48px;
@@ -733,7 +699,7 @@
     flex: 0 0 auto;
     padding: 0;
     margin: 0;
-    font: italic 600 8px "Poppins", sans-serif;
+    font: italic 600 12px "Poppins", sans-serif;
     color: #435334;
     text-align: center;
     letter-spacing: 2.48px;
@@ -762,7 +728,7 @@
     margin-top: 10.5px;
 }
 
-.review-section-content {
+.review-section-content1 {
     display: flex;
     flex: 0 0 auto;
     flex-direction: row;
@@ -781,28 +747,38 @@
 .review-content1-material {
     flex: 0 0 auto;
     padding-bottom: 205px;
+    position: relative;
+    margin-left: -10px;
 }
 
 .review-material1 {
     display: flex;
     width: 24px;
     height: 24px;
+    position: absolute;
+    z-index: 2;
 }
 
 .review-main-content1-layout {
     flex: 0 0 auto;
     align-self: center;
-    padding-top: 12.5px;
+    padding-top: 2px;
     margin-left: -8px;
+    position: relative;
+    z-index: 1;
+    margin-left: 15px;
+    margin-top: 10px;
 }
 
 .review-main-content1 {
     box-sizing: border-box;
-    flex: 0 0 auto;
+    display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
     max-width: 300px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex: 0 0 auto;
     padding: 15px 12px;
     background: #efefef;
     border-radius: 12px 12px 12px 0px;
@@ -816,6 +792,450 @@
     font: 500 12px "Poppins", sans-serif;
     color: #435334;
     text-align: justify;
+}
+
+.reviewer1-container-layout {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 42px;
+}
+
+.reviewer1-container {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding-right: 23px;
+    padding-left: 23px;
+    background: #435334;
+    border-radius: 0px 26px 26px 26px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.reviewer-content {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    font: 600 12px "Poppins", sans-serif;
+    color: white;
+}
+
+.reviewer-name {
+    font: 500 12px "Poppins", sans-serif;
+}
+
+.reviewer-description {
+    font: 800 12px Poppins, sans-serif;
+}
+
+.review-section-content2 {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding-top: 15px;
+    margin-left: 2px;
+}
+
+.review-content2 {
+    flex: 0 0 auto;
+    padding-left: 10px;
+}
+
+.review-main-content2 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    max-width: 300px;
+    padding: 15px 12px;
+    margin-left: -7px;
+    background: #efefef;
+    border-radius: 12px 12px 12px 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.review-content2-description {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    font: 500 12px "Poppins", sans-serif;
+    color: #435334;
+    text-align: justify;
+}
+
+.reviewer2-container-layout {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: 42px;
+    width: 240px;
+    margin-left: -7px;
+    background: #435334;
+    border-radius: 0px 26px 26px 26px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.reviewer2-container {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding-right: 23px;
+    padding-left: 23px;
+}
+
+.review-content2-material {
+    flex: 0 0 auto;
+    margin-top: -55px;
+}
+
+.review-material2 {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    margin-left: 295px;
+    margin-bottom: 40px;
+}
+
+.review-section-statement {
+    flex: 0 0 auto;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 20.5px;
+    color: #435334;
+    text-align: center;
+}
+
+.review-statement1 {
+    font: 700 16px "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+}
+
+.review-statement2 {
+    font: 500 16px "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+}
+
+.join-section-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-top: 3px;
+}
+
+.join-section-content {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    max-width: 360px;
+    padding-right: 16.5px;
+    padding-left: 19px;
+}
+
+.join-section-header {
+    flex: 0 0 auto;
+}
+
+.join-header-title {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font: italic 600 12px Poppins, sans-serif;
+    color: #435334;
+    text-align: center;
+    letter-spacing: 2.48px;
+}
+
+.join-header-statement1 {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font: 500 20px "Plus Jakarta Sans", sans-serif;
+    color: #435334;
+    text-align: center;
+}
+
+.join-header-statement2 {
+    font: 700 20px "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+}
+
+.join-description {
+    flex: 0 0 auto;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 17px;
+    color: black;
+    text-align: justify;
+    font: 400 12px "Poppins", sans-serif;
+}
+
+.resqbites-style {
+    font: italic 800 12px "Poppins", sans-serif;
+    color: #417a5b;
+}
+
+.join-section-image {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding-left: 16px;
+    margin-top: 17px;
+}
+
+.join-image {
+    display: block;
+    flex: 0 0 auto;
+    max-width: initial;
+    max-height: initial;
+    object-fit: cover;
+    margin-right: -19px;
+}
+
+.join-button {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 auto;
+    align-self: center;
+    width: 179px;
+    min-width: 179px;
+    height: 42px;
+    margin-top: 22px;
+    margin-left: -17px;
+    font: 600 12px Poppins, sans-serif;
+    color: white;
+    cursor: pointer;
+    background: #435334;
+    border: none;
+    border-radius: 26px;
+}
+
+.founders-section-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 106%;
+}
+
+.founders-section-header {
+    flex: 0 0 auto;
+}
+
+.founders-header-title {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font: italic 600 12px Poppins, sans-serif;
+    color: #435334;
+    text-align: center;
+    letter-spacing: 2.48px;
+}
+
+.founders-header-statement1 {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font: 500 20px "Plus Jakarta Sans", sans-serif;
+    color: #435334;
+    text-align: center;
+}
+
+.founders-header-statement2 {
+    font: 800 20px "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+}
+
+.founders-section-content {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 1px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.founders-content-layout {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.founders-image {
+    display: block;
+    flex: 0 0 auto;
+    max-width: initial;
+    height: 214px;
+}
+
+.founders-content-name {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9.5px;
+    width: 115px;
+}
+
+.founders-name {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    font: 800 15px "Plus Jakarta Sans", sans-serif;
+    color: #435334;
+}
+
+.founders-position {
+    padding: 0;
+    margin: 0;
+    margin-top: 1px;
+    font: 600 9.5px "Plus Jakarta Sans", sans-serif;
+    color: #435334;
+}
+
+.footer1-container {
+    width: 360px;
+    background: white;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 8px;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 154px;
+    padding: 33px 19px 22px;
+}
+
+.footer1-info-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.footer1-title {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    font: 800 20px "Plus Jakarta Sans", sans-serif;
+    color: #3a855d;
+}
+
+.footer1-social-media-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 19.5px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10.5px;
+}
+
+.twitter-icon {
+    display: flex;
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    color: #435334;
+}
+
+.youtube-icon {
+    display: flex;
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    color: #435334;
+}
+
+.instagram-icon {
+    display: flex;
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    color: #435334;
+}
+
+.footer1-menu-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-end;
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-top: 6px;
+}
+
+.footer1-menu-title {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    font: 600 12px "Plus Jakarta Sans", sans-serif;
+    color: #3a855d;
+    white-space: pre-wrap;
+}
+
+.footer2-container {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: 23px;
+    width: 360px;
+    padding-right: 19px;
+    padding-left: 19px;
+    background: #435334;
+}
+
+.footer2-copyright {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    font: 400 8px "Plus Jakarta Sans", sans-serif;
+    color: white;
+    letter-spacing: -0.2px;
 }
 
 @media (min-width: 1024px) {
