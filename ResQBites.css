@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #435334;
+    --secondary-color: #3A855D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    height: 80px;
+}
+
+.offcanvas {
+    background-color: var(--primary-color);
+}
+
+.offcanvas-img img {
+    height: 32px;
+}
+
+nav .navbar-brand img {
+    width: 48px;
+    /* margin-left: 20px; */
+}
+
+nav .navbar-brand2 {
+    color: #3A855D;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+nav .nav-link {
+    color: #3A855D;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
 .header-container {
     box-sizing: border-box;
     display: flex;
@@ -1238,7 +1292,49 @@
     letter-spacing: -0.2px;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 991.98px) {
+
+    /* Menargetkan layar kecil sampai medium */
+    #offcanvasNavbar .offcanvas-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #offcanvasNavbar .nav-link {
+        color: white;
+    }
+
+    .navbar-nav {
+        gap: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    nav .navbar-brand img {
+        width: 60px;
+    }
+
+    nav .navbar-brand2 {
+        display: none;
+    }
+
+    .login-btn {
+        color: white !important;
+        padding: 12px 32px !important;
+        border: 3px solid var(--primary-color);
+        background-color: var(--primary-color);
+        border-radius: 32px;
+    }
+
+    .login-btn:hover {
+        background-color: transparent;
+        color: var(--primary-color) !important;
+        border: 3px solid var(--primary-color);
+        transition: all 0.3s ease-in-out;
+    }
+
     .header-container {
         padding: 20px;
     }
