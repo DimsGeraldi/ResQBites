@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #435334;
+    --secondary-color: #3A855D;
+}
+
+section#cart-address {
+    background-color: var(--primary-color);
+    border-radius: 0px 0px 20px 20px;
+}
+
+.box-cart-address {
+    background-color: #fff;
+    border-radius: 10px;
+    /* margin: 10px 10px 10px 10px; */
+    padding: 20px 20px;
+    /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 49%;
+}
+
+.box-cart-address img {
+    width: 32px;
+}
+
+.body-cart-address {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.title-cart-address {
+    color: #989898;
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+section#search-bar {
+    margin: 40px 0px;
+}
+
+#search-bar input {
+    border: 1px solid #c5c5c5;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#search-bar button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+
+#search-bar button img {
+    width: 30px;
+}
+
+@media (max-width: 991.98px) {
+    .box-cart-address {
+        width: 100%;
+    }
+
+    .box-address {
+        display: none !important;
+    }
+
+    section#search-bar {
+        margin: 20px 0px;
+    }
+}
