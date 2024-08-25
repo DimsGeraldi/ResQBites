@@ -76,6 +76,10 @@ section#search-bar {
     width: 30px;
 }
 
+.banner-mobile img {
+    width: 100%;
+}
+
 @media (max-width: 991.98px) {
     .box-cart-address {
         width: 100%;
@@ -85,7 +89,36 @@ section#search-bar {
         display: none !important;
     }
 
+    .body-cart-address {
+        font-size: 12px;
+    }
+
+    .title-cart-address {
+        font-size: 8px;
+    }
+
     section#search-bar {
         margin: 20px 0px;
     }
+
+    #search-bar input {
+        border: 1px solid #c5c5c5;
+        border-radius: 10px;
+        padding: 10px 20px;
+        width: 100%;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    #search-bar button img {
+        width: 20px;
+    }
+
+    #search-bar button {
+        padding: 10px 20px;
+    }
+
 }
