@@ -57,3 +57,34 @@ html {
     background-color: var(--primary-color);
     color: #ffffff;
 }
+
+.mitra-penjual .card-toko {
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 2px;
+    padding: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.mitra-penjual .card-toko img {
+    width: 100%;
+}
+
+.mitra-name {
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #435334;
+}
+
+.mitra-product {
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #435334;
+}
