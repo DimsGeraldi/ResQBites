@@ -121,6 +121,10 @@ footer .header-container {
     .navbar-nav {
         gap: 30px;
     }
+
+    footer .brand-name img {
+        width: 200px;
+    }
 }
 
 @media (min-width: 992px) {

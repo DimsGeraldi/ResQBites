@@ -165,15 +165,31 @@ section#search-bar {
     /* 21.906px */
 }
 
-.card-button button {
+.card-button button,
+.product-button button {
     background-color: var(--primary-color);
-    border: none;
+    border: 3px solid var(--primary-color);
     border-radius: 10px;
     color: #fff;
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
+    line-height: normal;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 15px
+}
+
+.product-button-secondary button {
+    background-color: #FFF;
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    color: var(--primary-color);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
     line-height: normal;
     padding: 10px 20px;
     width: 100%;

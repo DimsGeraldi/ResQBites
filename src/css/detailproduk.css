@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #435334;
+    --secondary-color: #3A855D;
+}
+
+.product-title {
+    color: #435334;
+    text-align: left;
+    font-family: "Plus Jakarta Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.product-image img {
+    width: 100%;
+}
+
+.product-description {
+    margin: 0px 0px 20px 0px !important;
+}
+
+.quantity-input span {
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.quantity-input .num-quantity {
+    margin: 0px 20px;
+}
+
+.minus-quantity,
+.plus-quantity {
+    font-weight: 400 !important;
+    border-radius: 36px;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 4px 16px;
+}
+
+.minus-quantity {
+    background-color: #dcdcdc;
+    color: var(--primary-color);
+}
+
+.plus-quantity {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
