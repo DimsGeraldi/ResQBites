@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #435334;
+    --secondary-color: #3A855D;
+}
+
+.banner {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    overflow-x: hidden;
+}
+
+.color-custom-strong {
+    color: #569673;
+}
+
+.banner-content {
+    max-width: 100%;
+    /* Changed from 1100px to full width */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    padding-left: 20px;
+    /* Padding only on the left */
+    padding-right: 0;
+    /* No padding on the right */
+}
+
+.banner-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.banner-image {
+    flex: 1;
+    text-align: right;
+    padding: 0;
+    margin-right: 0;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    /* Only round the left side */
+}
+
+.banner-title {
+    font-family: "Plus Jakarta Sans";
+    font-weight: bold;
+    color: #435334;
+    font-size: 3.25rem;
+}
+
+.banner-subtext {
+    font-family: "Plus Jakarta Sans";
+    color: #000;
+    margin: 20px 0;
+    font-size: 1.175rem;
+}
+
+.banner-button {
+    font-family: "Plus Jakarta Sans";
+    background-color: #4a6c39;
+    color: white;
+    border-radius: 31px;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+    .banner {
+        padding: 20px 0;
+    }
+
+    .banner-text {
+        text-align: center;
+        /* Center text for mobile */
+    }
+
+    .banner-title {
+        font-family: "Plus Jakarta Sans";
+        font-size: 1.65rem;
+    }
+
+    .banner-subtext {
+        font-family: "Plus Jakarta Sans";
+        font-size: 0.875rem;
+    }
+
+    .banner-content {
+        flex-direction: column;
+    }
+
+    .banner-image img {
+        border-radius: 0;
+        /* Remove border-radius for mobile */
+    }
+}
+
+.gabunglah-mitra {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    min-height: 400px;
+    overflow-x: hidden;
+}
+
+.color-custom-strong {
+    color: #569673;
+}
+
+.gabunglah-mitra-content {
+    max-width: 100%;
+    /* Changed from 1100px to full width */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    padding-left: 0;
+    /* Padding only on the left */
+    padding-right: 20px;
+    /* No padding on the right */
+}
+
+.gabunglah-mitra-text {
+    flex: 1;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.gabunglah-mitra-image {
+    flex: 1;
+    text-align: left;
+    padding: 0;
+    margin-left: 0;
+}
+
+.gabunglah-mitra-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    /* Only round the left side */
+}
+
+.gabunglah-mitra-title {
+    font-family: "Plus Jakarta Sans";
+    font-weight: bold;
+    color: #435334;
+    font-size: 3.25rem;
+}
+
+.points-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Increased bottom margin for spacing */
+}
+
+.point-number {
+    background-color: #435334;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px; /* Increased width for better alignment */
+    height: 50px; /* Increased height for better alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+    margin-right: 20px; /* Increased margin for spacing */
+}
+
+.point p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #435334;
+    margin: 0;
+    font-size: 1.65rem; /* Updated font size */
+    line-height: 1.2; /* Added line height for better readability */
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+    .gabunglah-mitra {
+        padding: 20px 0;
+    }
+
+    .gabunglah-mitra-text {
+        text-align: center;
+        /* Center text for mobile */
+    }
+
+    .gabunglah-mitra-title {
+        font-family: "Plus Jakarta Sans";
+        font-size: 1.65rem;
+    }
+
+    .gabunglah-mitra-subtext {
+        font-family: "Plus Jakarta Sans";
+        font-size: 0.875rem;
+    }
+
+    .gabunglah-mitra-content {
+        flex-direction: column;
+    }
+
+    .gabunglah-mitra-image img {
+        border-radius: 0;
+        /* Remove border-radius for mobile */
+    }
+
+    .points-section {
+        align-items: left;
+    }
+
+    .points-section {
+        align-items: center;
+    }
+
+    .point {
+        justify-content: center;
+        margin-bottom: 15px; /* Adjusted margin for mobile */
+    }
+
+    .point-number {
+        width: 40px; /* Adjusted width for mobile */
+        height: 40px; /* Adjusted height for mobile */
+        font-size: 0.875rem;
+        margin-right: 10px; /* Adjusted margin for mobile */
+    }
+
+    .point p {
+        font-size: 1.15rem; /* Adjusted font size for mobile */
+        text-align: center;
+        line-height: 1.2; /* Ensured line height consistency */
+    }
+}
