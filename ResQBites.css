@@ -139,6 +139,7 @@ foo .header-container {
     max-width: 360px;
     padding: 33px 19px 13px;
     background-color: #f8f8f8;
+    margin-top: 80px;
 }
 
 .main-container-content {
