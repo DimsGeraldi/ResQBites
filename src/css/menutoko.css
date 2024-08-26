@@ -13,6 +13,7 @@ html {
 section#cart-address {
     background-color: var(--primary-color);
     border-radius: 0px 0px 20px 20px;
+
 }
 
 .box-cart-address {
@@ -76,11 +77,174 @@ section#search-bar {
     width: 30px;
 }
 
+.banner-title {
+    color: #435334;
+    font-family: "Plus Jakarta Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
 .banner-mobile img {
     width: 100%;
 }
 
+.banner-desktop img {
+    width: 100%;
+}
+
+.cards-wrapper {
+    margin: 20px 0px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.card {
+    width: 350px;
+    box-shadow: 0px 4px 4px 0px rgba(58, 133, 93, 0.5);
+    border: none;
+    flex-shrink: 0;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-title,
+.card-price {
+    color: #435334;
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card-price sup {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.card-mitra {
+    color: #435334;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: -10px;
+}
+
+.card-desc {
+    color: #7C7C7C;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 136.913%;
+    margin: 10px 0px;
+    /* 21.906px */
+}
+
+.card-button button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 15px
+}
+
+section#mitra-kami {
+    margin-top: 60px;
+}
+
+#mitra-kami .card {
+    width: 260px;
+    background-color: var(--primary-color);
+    padding: 20px;
+}
+
+#mitra-kami .card img {
+    width: 60%;
+    border-radius: 10px;
+}
+
+#mitra-kami .card-img {
+    padding-block: 20px;
+}
+
+.mitra-title {
+    color: #FFF;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.mitra-product-rating div {
+    color: #F8F8F8;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#mitra-kami .card-button button {
+    background-color: #FFF;
+    color: var(--primary-color);
+}
+
+#menu-lainnya .card {
+    width: 100%;
+}
+
+section#menu-lainnya {
+    margin-top: 60px;
+}
+
+footer .brand-name {
+    color: #3A855D;
+    font-family: "Plus Jakarta Sans";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
 @media (max-width: 991.98px) {
+    .banner-title {
+        font-size: 24px;
+    }
+
     .box-cart-address {
         width: 100%;
     }
@@ -121,4 +285,14 @@ section#search-bar {
         padding: 10px 20px;
     }
 
+    .banner-desktop {
+        display: none;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .banner-mobile {
+        display: none;
+    }
 }

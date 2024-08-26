@@ -22,3 +22,16 @@ window.addEventListener('scroll', function () {
         nav.classList.remove('shadow');
     }
 });
+
+const scrollable = document.querySelector('.cards-wrapper-menu');
+const scrollableMitra = document.querySelector('.cards-wrapper-mitra');
+scrollable.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    // scrollable.scrollLeft += e.deltaY;
+    scrollable.scrollLeft += e.deltaY * 2;
+});
+scrollableMitra.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    // scrollable.scrollLeft += e.deltaY;
+    scrollableMitra.scrollLeft += e.deltaY * 2;
+});
