@@ -56,14 +56,14 @@ body {
 }
 
 .login-switch a {
-        text-decoration: none;
-        font-weight: 200;
-        font-family: poppins;
-        color: #A8A8A8;
-        transition: color 0.3s;
-        display: inline-block;
-        font-size: 18px;
-    }
+    text-decoration: none;
+    font-weight: 200;
+    font-family: poppins;
+    color: #A8A8A8;
+    transition: color 0.3s;
+    display: inline-block;
+    font-size: 18px;
+}
 
 .login-switch a.active {
     color: #3A855D;
@@ -73,8 +73,9 @@ body {
 
 .login-switch a.inactive {
     font-style: italic;
-    color:#A8A8A8;
+    color: #A8A8A8;
     font-weight: 250;
+    margin-right: 5px;
 }
 
 h2 {
@@ -148,19 +149,21 @@ h2 {
 }
 
 .login-image {
-    display: none; 
+    display: none;
 }
 
 .login-image img {
-    width:min-content;
-    margin-top: 150px;
-    height: auto;
+    width: 80%; /* Atur ukuran gambar agar proporsional */
+    height: auto; 
+    object-fit: cover; /* Agar gambar tetap proporsional */
+    margin: 0; /* Hapus margin agar gambar sesuai dengan kontainer */
+    border-radius: 10px; /* Opsional: tambah border-radius jika ingin rounded corners */
 }
 
 @media (min-width: 1200px) {
     .login-container {
         flex-direction: row;
-        height: 100vh; /* Adjust to full viewport height */
+        height: 100vh; /* Menyesuaikan dengan tinggi viewport */
     }
 
     .login-form {
@@ -173,11 +176,13 @@ h2 {
         width: 50%;
         align-items: center;
         justify-content: center;
+        padding: 0 20px; /* Tambahkan padding horizontal untuk memberikan ruang */
     }
 
     .login-image img {
-        width: 100%;
-        height: auto;
-        object-fit: cover; /* Ensure the image covers the container */
+        width: 1000%;
+        height: 95%;
+        object-fit: fill;
+        margin-left: 100px;
     }
 }
