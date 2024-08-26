@@ -136,6 +136,7 @@ section#search-bar {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-bottom: 0 !important;
 }
 
 .card-price sup {
@@ -150,7 +151,7 @@ section#search-bar {
     font-style: italic;
     font-weight: 500;
     line-height: normal;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 
 .card-desc {
@@ -231,14 +232,7 @@ section#menu-lainnya {
     margin-top: 60px;
 }
 
-footer .brand-name {
-    color: #3A855D;
-    font-family: "Plus Jakarta Sans";
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-}
+
 
 @media (max-width: 991.98px) {
     .banner-title {
@@ -289,10 +283,19 @@ footer .brand-name {
         display: none;
     }
 
+    .card-price {
+        margin-top: 0px;
+    }
+
+    .card-mitra {
+        margin-top: 5px;
+    }
 }
 
 @media (min-width: 992px) {
     .banner-mobile {
         display: none;
     }
+
+
 }
