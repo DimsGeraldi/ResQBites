@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Mitra - ResQBites</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Register - ResQBites</title>
+    <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap">
     <link rel="stylesheet" href="src/css/login.css">
@@ -17,31 +17,39 @@
                     <img src="src/Icon/logo-withname.svg" alt="ResQBites Logo">
                 </div>
                 <div class="login-switch">
-                    <a href="Login.html" class="inactive">Pembeli</a>
-                    <a href="#" class="active">Mitra</a>
+                    <a href="#" class="active">Pembeli</a>
+                    <a href="Register-Mitra.html" class="inactive">Mitra</a>
                 </div>
             </div>
-            <h2>Masuk ke Akun Anda</h2>
-            <p class="subtext">Ayo mulai perjalananmu jadi pahlawan!</p>
+            <h2>Bergabung Sekarang</h2>
+            <p class="subtext">Buat akun anda dan jadilah pahlawan!</p>
 
             <form>
+                <div class="input-group">
+                    <label for="nama">Nama</label>
+                    <input type="nama" id="nama" placeholder="Masukkan Nama Lengkap Anda">
+                </div>
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="Masukkan Email Anda">
                 </div>
                 <div class="input-group">
+                    <label for="NoHP">NoHP</label>
+                    <input type="NoHP" id="NoHP" placeholder="Masukkan Nomor HP Anda">
+                </div>
+                <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Masukkan Password Anda">
                 </div>
-                <button type="submit" class="login-button">Login</button>
+                <button type="submit" class="login-button">Buat Akun</button>
             </form>
 
-            <p class="signup-text">Belum punya akun mitra? <a href="Register-Mitra.html">Gabung Mitra</a></p>
+            <p class="signup-text">Sudah punya akun? <a href="Login.html">Login Sekarang</a></p>
         </div>
 
         <!-- Bagian Kanan (Gambar) -->
         <div class="login-image">
-            <img src="src/img/loginmitra-banner.svg" alt="Login Image">
+            <img src="src/img/login-banner.svg" alt="Login Image">
         </div>
     </div>
 </body>
