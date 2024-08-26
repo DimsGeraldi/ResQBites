@@ -74,7 +74,7 @@ body {
 .login-switch a.inactive {
     font-style: italic;
     color: #A8A8A8;
-    font-weight: 250;
+    font-weight: 400;
     margin-right: 5px;
 }
 
@@ -89,6 +89,7 @@ h2 {
 
 .subtext {
     color: #000000;
+    margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 5px;
     font-size: 22px;
@@ -98,7 +99,7 @@ h2 {
 
 .input-group {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .input-group label {
