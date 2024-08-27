@@ -141,6 +141,7 @@ html {
     flex: 1;
     padding: 20px;
     margin-left: 50px;
+    margin-top: 120px;
 }
 
 .gabunglah-mitra-image {
@@ -161,7 +162,7 @@ html {
     font-family: "Plus Jakarta Sans";
     font-weight: bold;
     color: #435334;
-    font-size: 3.25rem;
+    font-size: 2.75rem;
 }
 
 .points-section {
@@ -173,29 +174,34 @@ html {
 .point {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Increased bottom margin for spacing */
+    margin-bottom: 20px;
+    /* Increase bottom margin for better spacing */
 }
 
 .point-number {
     background-color: #435334;
     color: #fff;
     border-radius: 50%;
-    width: 50px; /* Increased width for better alignment */
-    height: 50px; /* Increased height for better alignment */
+    min-width: 50px;
+    /* Use min-width and min-height for flexibility */
+    min-height: 50px;
+    /* Ensures the circle can grow if the font size increases */
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: bold;
-    margin-right: 20px; /* Increased margin for spacing */
+    margin-right: 20px;
 }
 
 .point p {
     font-family: "Plus Jakarta Sans", sans-serif;
     color: #435334;
     margin: 0;
-    font-size: 1.65rem; /* Updated font size */
-    line-height: 1.2; /* Added line height for better readability */
+    font-size: 1.65rem;
+    /* Larger font size */
+    line-height: 1.2;
+    /* Ensures better readability and prevents text overlap */
 }
 
 /* Mobile Specific Styles */
@@ -204,23 +210,48 @@ html {
         padding: 20px 0;
     }
 
+    .gabunglah-mitra-content {
+        flex-direction: column;
+    }
+
     .gabunglah-mitra-text {
+        order: 1;
+        /* Teks berada di atas */
         text-align: center;
         /* Center text for mobile */
+        padding-bottom: 20px;
+        /* Add some space below text */
+        margin-top: 20px;
+        /* Add some space below text */
+        ;
+    }
+
+    .gabunglah-mitra-image {
+        order: 2;
+        /* Gambar berada di tengah */
+        text-align: center;
+        /* Center image for mobile */
+        margin-top: 20px;
+        /* Add margin to separate from text */
+    }
+
+    .points-section {
+        order: 3;
+        /* Poin berada di bawah gambar */
+        text-align: center;
+        /* Center points section for mobile */
+        margin-top: 20px;
+        /* Add margin to separate from image */
     }
 
     .gabunglah-mitra-title {
         font-family: "Plus Jakarta Sans";
-        font-size: 1.65rem;
+        font-size: 1.319rem;
     }
 
     .gabunglah-mitra-subtext {
         font-family: "Plus Jakarta Sans";
         font-size: 0.875rem;
-    }
-
-    .gabunglah-mitra-content {
-        flex-direction: column;
     }
 
     .gabunglah-mitra-image img {
@@ -229,28 +260,240 @@ html {
     }
 
     .points-section {
-        align-items: left;
-    }
-
-    .points-section {
         align-items: center;
     }
 
     .point {
         justify-content: center;
-        margin-bottom: 15px; /* Adjusted margin for mobile */
+        margin-bottom: 15px;
+        /* Adjusted margin for mobile */
     }
 
     .point-number {
-        width: 40px; /* Adjusted width for mobile */
-        height: 40px; /* Adjusted height for mobile */
+        width: 40px;
+        /* Adjusted width for mobile */
+        height: 40px;
+        /* Adjusted height for mobile */
         font-size: 0.875rem;
-        margin-right: 10px; /* Adjusted margin for mobile */
+        margin-right: 10px;
+        /* Adjusted margin for mobile */
     }
 
     .point p {
-        font-size: 1.15rem; /* Adjusted font size for mobile */
+        margin-left: 5px;
+        font-size: 0.975rem;
+        /* Adjusted font size for mobile */
+        text-align: left;
+        line-height: 1.2;
+        /* Ensured line height consistency */
+    }
+}
+
+.mitra-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.mitra-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mitra-title {
+    font-weight: 500;
+    font-size: 40px;
+    color: #435334;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    font-weight: 800;
+}
+
+.mitra-layout {
+    overflow-x: auto;
+    display: flex;
+    justify-content: flex-start; /* Mengatur konten dimulai dari kiri */
+    padding-bottom: 20px;
+    scroll-behavior: smooth; /* Menambahkan efek scroll halus */
+}
+
+.mitra-content {
+    display: flex;
+    gap: 20px;
+}
+
+.mitra-item {
+    flex: 0 0 auto;
+}
+
+.mitra-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Batas tampilan gambar pertama terlihat penuh di desktop */
+.mitra-content::before {
+    content: '';
+    min-width: 10px; /* Tambahkan padding kiri di awal */
+}
+
+.mitra-summary {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #435334;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mitra-layout {
+        overflow-x: scroll;
+        padding-left: 2px; /* Mengurangi jarak kiri di mobile */
+    }
+
+    .mitra-item {
+        min-width: 80%;
+        max-width: 80%;
+    }
+
+    /* Adjusting text size for mobile */
+    .mitra-title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 24px; /* Ukuran font lebih kecil di mobile */
+    }
+
+    .mitra-summary {
+        font-size: 16px; /* Ukuran font lebih kecil di mobile */
+        margin-top: 20px; /* Mengurangi jarak atas untuk mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .mitra-layout {
+        overflow-x: auto;
+        padding-left: 20px; /* Menambahkan ruang agar gambar pertama terlihat utuh */
+    }
+
+    .mitra-item {
+        min-width: 400px; /* Gambar lebih besar pada desktop */
+        max-width: 400px;
+    }
+}
+
+.daftar-mitra {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    overflow-x: hidden;
+}
+
+.color-custom-strong {
+    color: #569673;
+}
+
+.daftar-mitra-content {
+    max-width: 100%;
+    /* Changed from 1100px to full width */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    padding-left: 20px;
+    /* Padding only on the left */
+    padding-right: 0;
+    /* No padding on the right */
+}
+
+.daftar-mitra-text {
+    flex: 1;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+.daftar-mitra-image {
+    flex: 1;
+    text-align: right;
+    padding: 0;
+    margin-right: 0;
+}
+
+.daftar-mitra-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    /* Only round the left side */
+}
+
+.daftar-mitra-title {
+    font-family: "Plus Jakarta Sans";
+    font-weight: normal;
+    color: #435334;
+    font-size: 3.25rem;
+    margin-bottom: 20px;
+}
+
+.daftar-mitra-subtext {
+    font-family: "Plus Jakarta Sans";
+    color: #000;
+    margin: 0px 0;
+    font-size: 1.275rem;
+}
+
+.daftar-mitra-button {
+    margin-top: 30px;
+    font-family: "Plus Jakarta Sans";
+    background-color: #4a6c39;
+    color: white;
+    border-radius: 31px;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+    .daftar-mitra {
+        padding: 20px 0;
+    }
+
+    .daftar-mitra-text {
         text-align: center;
-        line-height: 1.2; /* Ensured line height consistency */
+        order: 2;
+        /* Center text for mobile */
+    }
+
+    .daftar-mitra-title {
+        font-family: "Plus Jakarta Sans";
+        font-size: 1.65rem;
+    }
+
+    .daftar-mitra-subtext {
+        font-family: "Plus Jakarta Sans";
+        font-size: 0.875rem;
+    }
+
+    .daftar-mitra-content {
+        flex-direction: column;
+    }
+    
+    .daftar-mitra-image {
+        order: 1;
+    }
+    .daftar-mitra-image img {
+        border-radius: 0;
+        /* Remove border-radius for mobile */
     }
 }
