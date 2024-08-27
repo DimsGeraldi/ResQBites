@@ -27,6 +27,13 @@ nav {
     height: 80px;
 }
 
+.line-break {
+    border-bottom: 3px solid #bababa;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
 .offcanvas {
     background-color: var(--primary-color);
 }
@@ -101,6 +108,10 @@ footer .header-container {
     padding-right: 21px;
     padding-left: 21px;
     background: white;
+}
+
+footer {
+    margin-top: 60px;
 }
 
 

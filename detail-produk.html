@@ -110,9 +110,9 @@
 					</div>
 					<div class="product-quantity">
 						<div class="quantity-input d-flex align-items-center">
-							<span class="minus-quantity">-</span>
-							<span class="num-quantity">1</span>
-							<span class="plus-quantity">+</span>
+							<span class="minus-quantity" onclick="decreaseQuantity()">-</span>
+							<span class="num-quantity" id="quantity-value">1</span>
+							<span class="plus-quantity" onclick="increaseQuantity()">+</span>
 						</div>
 					</div>
 					<div class="row mt-3">
@@ -125,10 +125,10 @@
 					</div>
 					<div class="mitra-penjual">
 						<div class="card-toko d-flex align-items-center row">
-							<div class="mitra-img d-flex col-2">
+							<div class="mitra-img d-flex col-3 col-lg-2">
 								<img src="src/img/logo-ekambi.svg" alt="">
 							</div>
-							<div class="mitra-brand col-10">
+							<div class="mitra-brand col-9 col-lg-10">
 								<div class="mitra-name">
 									Toko Roti Ekambi
 								</div>

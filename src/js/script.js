@@ -35,3 +35,17 @@ scrollableMitra.addEventListener('wheel', function (e) {
     // scrollable.scrollLeft += e.deltaY;
     scrollableMitra.scrollLeft += e.deltaY * 2;
 });
+
+function increaseQuantity() {
+    let quantityElement = document.getElementById('quantity-value');
+    let currentQuantity = parseInt(quantityElement.textContent);
+    quantityElement.textContent = currentQuantity + 1;
+}
+
+function decreaseQuantity() {
+    let quantityElement = document.getElementById('quantity-value');
+    let currentQuantity = parseInt(quantityElement.textContent);
+    if (currentQuantity > 1) {
+        quantityElement.textContent = currentQuantity - 1;
+    }
+}

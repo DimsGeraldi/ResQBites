@@ -306,6 +306,14 @@ section#menu-lainnya {
     .card-mitra {
         margin-top: 5px;
     }
+
+    #menu-lainnya .card-desc {
+        display: none;
+    }
+
+    #menu-lainnya .card-button button {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 992px) {

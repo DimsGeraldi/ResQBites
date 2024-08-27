@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #435334;
+    --secondary-color: #3A855D;
+}
+
+.keranjang-title img {
+    width: 60px;
+}
+
+input#pilih-semua {
+    margin-right: 10px;
+}
+
+label {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.radio label {
+    position: relative;
+    width: 100%;
+    /* background-color: aqua; */
+    border: 2px solid var(--primary-color);
+    padding: 16px 0px 20px 16px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.radio label::before {
+    /* position: absolute; */
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* vertical-align: middle; */
+}
+
+input[type="radio"]:checked+label {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+input[type="radio"]:checked+label::before {
+    background-color: var(--primary-color);
+    border: 5px solid white;
+}
+
+.left-cart {
+    padding: 32px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 5px;
+    height: 13px;
+    border: 2px solid transparent;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg) scale(1);
+}
+
+input[type="checkbox"]:checked:before {
+    border-color: white;
+}
+
+.hapus-semua a {
+    color: #445435;
+    text-align: right;
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.cart-item img {
+    width: 40%;
+}
+
+.item-product-name {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.item-product-price {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.item-product-price-mobile {
+    margin-left: 28px;
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.cart-item .quantity-input span {
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.metode-title {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ringkasan-text {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.ringkasan-num {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ringkasan-num-total {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@media (max-width: 991.98px) {
+    .keranjang-title img {
+        width: 40px;
+    }
+
+    .cart-item .img-desktop {
+        display: none;
+    }
+
+    .cart-item .img-mobile {
+        width: 80%;
+    }
+
+    .item-product-name {
+        /* display: none; */
+        margin-left: 28px;
+    }
+
+    .item-product-price {
+        display: none;
+    }
+
+    .item-product-price-mobile {
+        margin-left: 28px;
+        font-size: 24px;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .cart-item label {
+        display: none;
+    }
+
+    .cart-item .img-mobile {
+        display: none;
+    }
+
+    .item-product-price-mobile {
+        display: none;
+    }
+
+    /* .cart-item img {
+        display: none;
+    } */
+}

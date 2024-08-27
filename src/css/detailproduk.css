@@ -25,7 +25,8 @@ html {
 }
 
 .product-description {
-    margin: 0px 0px 20px 0px !important;
+    font-size: 20px;
+    margin: 10px 0px 20px 0px !important;
 }
 
 .quantity-input span {
@@ -87,4 +88,18 @@ html {
     font-weight: 600;
     line-height: normal;
     color: #435334;
+}
+
+@media (max-width: 991.98px) {
+    .product-title {
+        font-size: 36px;
+    }
+
+    .mitra-name {
+        font-size: 24px;
+    }
+
+    .mitra-product {
+        font-size: 16px;
+    }
 }
