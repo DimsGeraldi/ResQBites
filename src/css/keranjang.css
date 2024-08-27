@@ -156,6 +156,10 @@ input[type="checkbox"]:checked:before {
     font-weight: 700;
 }
 
+.cart-item .product-quantity-mobile span {
+    font-size: 16px;
+}
+
 .metode-title {
     color: #000;
     font-family: "Plus Jakarta Sans";
@@ -219,6 +223,9 @@ input[type="checkbox"]:checked:before {
         font-size: 24px;
     }
 
+    .product-quantity-desktop {
+        display: none;
+    }
 
 }
 
@@ -232,7 +239,7 @@ input[type="checkbox"]:checked:before {
     }
 
     .item-product-price-mobile {
-        display: none;
+        display: none !important;
     }
 
     /* .cart-item img {

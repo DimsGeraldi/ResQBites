@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #435334;
+    --secondary-color: #3A855D;
+}
+
+.section-1 .nama-toko {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.section-1 .tanggal-beli {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.status-pesanan {
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-weight: 800;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.selesai {
+    background-color: #8effc3;
+    color: var(--primary-color)
+}
+
+.diproses {
+    background-color: #fff388;
+    color: rgb(94, 94, 0)
+}
+
+.product-history .product-name {
+    color: var(--primary-color);
+    font-family: "Plus Jakarta Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.product-history .card-desc {
+    font-size: 20px;
+}
+
+@media (max-width: 991.98px) {
+    .status-pesanan {
+        font-size: 16px;
+    }
+
+    .product-history .product-name {
+        font-size: 20px;
+    }
+
+    .product-history .card-desc {
+        font-size: 16px;
+    }
+}

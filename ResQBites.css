@@ -23,6 +23,10 @@ nav {
     background: white;
 }
 
+img {
+    border-radius: 10px;
+}
+
 .sacrificial-afternav {
     height: 80px;
 }
