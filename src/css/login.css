@@ -13,7 +13,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #ffffff; /* Set background to white */
+    background-color: #ffffff;
+    /* Set background to white */
     margin: 0;
     padding: 0;
 }
@@ -21,11 +22,13 @@ body {
 .login-container {
     display: flex;
     background-color: white;
-    width: 100vw; /* Ensure full viewport width */
-    max-width: 100%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    /* Ensure full viewport width */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 .login-form {
@@ -34,6 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* background-color: red; */
 }
 
 .header {
@@ -79,7 +83,7 @@ body {
 }
 
 h2 {
-    color: #3A855D; 
+    color: #3A855D;
     font-size: 48px;
     margin-bottom: -10px;
     text-align: left;
@@ -93,7 +97,7 @@ h2 {
     margin-bottom: 20px;
     margin-left: 5px;
     font-size: 22px;
-    text-align: left; 
+    text-align: left;
     width: 100%;
 }
 
@@ -111,7 +115,8 @@ h2 {
 }
 
 .input-group input {
-    width: calc(100% - 10px); /* Ensure full width */
+    width: calc(100% - 10px);
+    /* Ensure full width */
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -120,15 +125,18 @@ h2 {
 }
 
 .login-button {
-    width: calc(100% - 10px); /* Make button full-width */
+    width: calc(100% - 10px);
+    /* Make button full-width */
     padding: 15px;
     background-color: #435334;
     color: white;
     border: none;
-    border-radius: 20px; /* More rounded */
+    border-radius: 20px;
+    /* More rounded */
     font-size: 18px;
     cursor: pointer;
-    margin-top: 30px; /* Add more space before login button */
+    margin-top: 30px;
+    /* Add more space before login button */
     margin-left: 5px;
     transition: background-color 0.3s;
 }
@@ -138,7 +146,8 @@ h2 {
 }
 
 .signup-text {
-    margin-top: 30px; /* Increase space below the login button */
+    margin-top: 30px;
+    /* Increase space below the login button */
     color: #333;
     text-align: center;
 }
@@ -154,17 +163,22 @@ h2 {
 }
 
 .login-image img {
-    width: 80%; /* Atur ukuran gambar agar proporsional */
-    height: auto; 
-    object-fit: cover; /* Agar gambar tetap proporsional */
-    margin: 0; /* Hapus margin agar gambar sesuai dengan kontainer */
-    border-radius: 10px; /* Opsional: tambah border-radius jika ingin rounded corners */
+    width: 80%;
+    /* Atur ukuran gambar agar proporsional */
+    height: auto;
+    object-fit: cover;
+    /* Agar gambar tetap proporsional */
+    margin: 0;
+    /* Hapus margin agar gambar sesuai dengan kontainer */
+    border-radius: 10px;
+    /* Opsional: tambah border-radius jika ingin rounded corners */
 }
 
 @media (min-width: 1200px) {
     .login-container {
         flex-direction: row;
-        height: 100vh; /* Menyesuaikan dengan tinggi viewport */
+        /* height: 100vh; */
+        /* Menyesuaikan dengan tinggi viewport */
     }
 
     .login-form {
@@ -175,14 +189,15 @@ h2 {
     .login-image {
         display: flex;
         width: 50%;
+        height: 100vh;
         align-items: center;
         justify-content: center;
-        padding: 0 20px; /* Tambahkan padding horizontal untuk memberikan ruang */
+        padding: 0 20px;
+        /* Tambahkan padding horizontal untuk memberikan ruang */
     }
 
     .login-image img {
         width: 1000%;
-        height: 95%;
         object-fit: fill;
         margin-left: 100px;
     }

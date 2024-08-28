@@ -10,145 +10,70 @@ html {
     --secondary-color: #3A855D;
 }
 
-.banner {
-    background-color: #f8f8f8;
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    overflow-x: hidden;
-}
-
 .color-custom-strong {
     color: #569673;
 }
 
-.banner-content {
-    max-width: 100%;
-    /* Changed from 1100px to full width */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: end;
-    padding-left: 20px;
-    /* Padding only on the left */
-    padding-right: 0;
-    /* No padding on the right */
-}
+.banner-content {}
 
 .banner-text {
-    flex: 1;
-    padding: 20px;
+
+    /* margin-left: 80px; */
 }
 
 .banner-image {
-    flex: 1;
+
     text-align: right;
     padding: 0;
     margin-right: 0;
 }
 
 .banner-image img {
-    max-width: 100%;
+    width: 120%;
     height: auto;
-    border-radius: 10px 0 0 10px;
-    /* Only round the left side */
 }
 
 .banner-title {
-    font-family: "Plus Jakarta Sans";
-    font-weight: bold;
     color: #435334;
-    font-size: 3.25rem;
+    font-family: "Plus Jakarta Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
 }
 
 .banner-subtext {
-    font-family: "Plus Jakarta Sans";
     color: #000;
-    margin: 20px 0;
-    font-size: 1.175rem;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 80%;
+    margin-block: 20px;
 }
 
 .banner-button {
-    font-family: "Plus Jakarta Sans";
-    background-color: #4a6c39;
-    color: white;
-    border-radius: 31px;
-    padding: 15px 20px;
-    font-weight: bold;
-}
-
-/* Mobile Specific Styles */
-@media (max-width: 768px) {
-    .banner {
-        padding: 20px 0;
-    }
-
-    .banner-text {
-        text-align: center;
-        /* Center text for mobile */
-    }
-
-    .banner-title {
-        font-family: "Plus Jakarta Sans";
-        font-size: 1.65rem;
-    }
-
-    .banner-subtext {
-        font-family: "Plus Jakarta Sans";
-        font-size: 0.875rem;
-    }
-
-    .banner-content {
-        flex-direction: column;
-    }
-
-    .banner-image img {
-        border-radius: 0;
-        /* Remove border-radius for mobile */
-    }
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background-color: var(--primary-color);
+    padding: 16px 32px;
+    border-radius: 60px;
 }
 
 .gabunglah-mitra {
-    background-color: #f8f8f8;
-    padding: 50px 0;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    min-height: 400px;
-    overflow-x: hidden;
+
+    /* overflow-x: hidden; */
 }
 
 .color-custom-strong {
     color: #569673;
-}
-
-.gabunglah-mitra-content {
-    max-width: 100%;
-    /* Changed from 1100px to full width */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: start;
-    padding-left: 0;
-    /* Padding only on the left */
-    padding-right: 20px;
-    /* No padding on the right */
-}
-
-.gabunglah-mitra-text {
-    flex: 1;
-    padding: 20px;
-    margin-left: 50px;
-    margin-top: 120px;
-}
-
-.gabunglah-mitra-image {
-    flex: 1;
-    text-align: left;
-    padding: 0;
-    margin-left: 0;
 }
 
 .gabunglah-mitra-image img {
@@ -316,9 +241,11 @@ html {
 .mitra-layout {
     overflow-x: auto;
     display: flex;
-    justify-content: flex-start; /* Mengatur konten dimulai dari kiri */
+    justify-content: flex-start;
+    /* Mengatur konten dimulai dari kiri */
     padding-bottom: 20px;
-    scroll-behavior: smooth; /* Menambahkan efek scroll halus */
+    scroll-behavior: smooth;
+    /* Menambahkan efek scroll halus */
 }
 
 .mitra-content {
@@ -339,7 +266,8 @@ html {
 /* Batas tampilan gambar pertama terlihat penuh di desktop */
 .mitra-content::before {
     content: '';
-    min-width: 10px; /* Tambahkan padding kiri di awal */
+    min-width: 10px;
+    /* Tambahkan padding kiri di awal */
 }
 
 .mitra-summary {
@@ -358,7 +286,8 @@ html {
 @media (max-width: 768px) {
     .mitra-layout {
         overflow-x: scroll;
-        padding-left: 2px; /* Mengurangi jarak kiri di mobile */
+        padding-left: 2px;
+        /* Mengurangi jarak kiri di mobile */
     }
 
     .mitra-item {
@@ -370,23 +299,28 @@ html {
     .mitra-title {
         margin-top: 20px;
         margin-bottom: 10px;
-        font-size: 24px; /* Ukuran font lebih kecil di mobile */
+        font-size: 24px;
+        /* Ukuran font lebih kecil di mobile */
     }
 
     .mitra-summary {
-        font-size: 16px; /* Ukuran font lebih kecil di mobile */
-        margin-top: 20px; /* Mengurangi jarak atas untuk mobile */
+        font-size: 16px;
+        /* Ukuran font lebih kecil di mobile */
+        margin-top: 20px;
+        /* Mengurangi jarak atas untuk mobile */
     }
 }
 
 @media (min-width: 769px) {
     .mitra-layout {
         overflow-x: auto;
-        padding-left: 20px; /* Menambahkan ruang agar gambar pertama terlihat utuh */
+        padding-left: 20px;
+        /* Menambahkan ruang agar gambar pertama terlihat utuh */
     }
 
     .mitra-item {
-        min-width: 400px; /* Gambar lebih besar pada desktop */
+        min-width: 400px;
+        /* Gambar lebih besar pada desktop */
         max-width: 400px;
     }
 }
@@ -488,10 +422,11 @@ html {
     .daftar-mitra-content {
         flex-direction: column;
     }
-    
+
     .daftar-mitra-image {
         order: 1;
     }
+
     .daftar-mitra-image img {
         border-radius: 0;
         /* Remove border-radius for mobile */
