@@ -323,3 +323,22 @@ section#menu-lainnya {
 
 
 }
+
+#load-more {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#load-more-btn {
+    background-color: #435334; /* Warna hijau tua */
+    color: white; /* Warna teks putih */
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px; /* Ukuran teks */
+    padding: 10px 20px; /* Padding vertikal 10px dan horizontal 20px */
+    border-radius: 15px; /* Membuat sudut sedikit melengkung */
+    border: none; /* Menghapus border default */
+}
+
+#load-more-btn:hover {
+    background-color: #0d6efd; /* Warna hijau lebih tua saat hover */
+}
