@@ -10,13 +10,22 @@ html {
     --secondary-color: #3A855D;
 }
 
+
+.card-toko-detail {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
 .mitra-img img {
     width: 100px;
 }
 
-.card-toko {
+.card-toko-mitra {
     margin-top: 20px;
-    width: 100%;
+    /* width: 100%; */
     margin-left: 2px;
     padding: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -39,4 +48,121 @@ html {
     font-weight: 600;
     line-height: normal;
     color: #435334;
+}
+
+.rating-desktop img {
+    height: 80px;
+}
+
+.rating-desktop .rating-title {
+    color: #445435;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.rating-desktop .rating-value {
+    color: #445435;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: -10px;
+}
+
+.rating-desktop .rating-value span {
+    color: #445435;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.alamat-toko-card {
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.alamat-toko-card img {
+    width: 140px;
+    position: absolute;
+    left: -40px;
+    top: -20px;
+}
+
+.alamat-toko-detail {
+    margin-left: 100px;
+    color: white;
+}
+
+.alamat-toko-detail div {
+    color: white;
+}
+
+.title-alamat-toko {
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #a0a0a0;
+}
+
+.body-alamat-toko {
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #000000;
+}
+
+.location-mitra img {
+    top: -40px;
+}
+
+@media (max-width: 991.98px) {
+    .rating-desktop {
+        display: none !important;
+    }
+
+    .alamat-toko-card {
+        /* display: none !important; */
+    }
+
+    .mitra-name {
+        font-size: 28px;
+    }
+
+    .mitra-product {
+        font-size: 20px;
+    }
+
+    .alamat-toko-card img {
+        width: 120px;
+        position: absolute;
+        left: -44px;
+        top: -20px;
+    }
+
+    .alamat-toko-detail {
+        margin-left: 60px;
+    }
+
+    .body-alamat-toko {
+        font-size: 16px;
+    }
+
+    .location-mitra {
+        display: none !important;
+    }
 }
