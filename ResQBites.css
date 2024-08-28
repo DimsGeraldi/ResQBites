@@ -48,7 +48,6 @@ img {
 
 nav .navbar-brand img {
     width: 40px;
-    /* margin-left: 20px; */
 }
 
 nav .navbar-brand2 {
@@ -58,6 +57,36 @@ nav .navbar-brand2 {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.navbar-nav .nav-item .nav-link.dropdown-toggle {
+    color: #3A855D;
+}
+
+.navbar-nav .nav-item .nav-link.dropdown-toggle.show {
+    color: #435334;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #fff;
+    border: none;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: #435334;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #435334;
+    color: #fff; 
+}
+
+.offcanvas-body .nav-item.d-lg-none + .nav-item.d-lg-none {
+	margin-top: 60px; 
+}
+
+.fas {
+    margin-right: 8px;
 }
 
 nav .nav-link,
