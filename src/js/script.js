@@ -13,6 +13,37 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    const filterRadios = document.querySelectorAll('.status-cart-saya input[type="radio"]');
+    const orders = document.querySelectorAll('.cart-pesanan-saya');
+
+    // Fungsi untuk menampilkan pesanan sesuai dengan filter yang dipilih
+    function filterOrders(filter) {
+        orders.forEach(order => {
+            // Ambil nilai dari atribut data-pesanan-categories
+            const category = order.getAttribute('data-pesanan-categories');
+
+            // Tampilkan pesanan jika kategori sesuai atau filter 'semua' dipilih
+            if (filter === 'semua' || category === filter) {
+                order.classList.add('active');
+            } else {
+                order.classList.remove('active');
+            }
+        });
+    }
+
+    // Tambahkan event listener untuk setiap input radio
+    filterRadios.forEach(radio => {
+        radio.addEventListener('change', function () {
+            if (this.checked) {
+                const filter = this.id; // Menggunakan id sebagai filter
+                filterOrders(filter);
+            }
+        });
+    });
+
+    // Default filter untuk menampilkan semua pesanan
+    filterOrders('semua');
 });
 
 window.addEventListener('scroll', function () {

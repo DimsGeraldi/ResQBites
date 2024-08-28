@@ -10,6 +10,27 @@ html {
     --secondary-color: #3A855D;
 }
 
+.status-cart-saya {
+    padding: 32px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.cart-pesanan-saya {
+    padding: 32px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: none;
+}
+
+.cart-pesanan-saya.active {
+    display: block; /* Tampilkan elemen pesanan yang memiliki kelas 'active' */
+}
+
+
 .section-1 .nama-toko {
     color: #000;
     font-family: "Plus Jakarta Sans";
