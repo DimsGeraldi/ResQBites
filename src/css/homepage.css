@@ -10,28 +10,57 @@ html {
     --secondary-color: #3A855D;
 }
 
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
 .main-container {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    max-width: 360px;
     padding: 33px 19px 13px;
     background-color: #f8f8f8;
-    margin-top: 80px;
+    gap: 77px;
+    padding-bottom: 98px;
+    margin-top: 83px;
 }
 
 .main-container-content {
     display: flex;
-    flex: 0 0 auto;
+    flex: 1 1 100%;
     flex-direction: column;
     align-items: stretch;
-    justify-content: flex-start;
+    justify-content: center;
+}
+
+.container-profile {
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .main-container-title {
-    flex: 0 0 auto;
+    flex: 1 1 100%;
     align-self: center;
     padding: 0;
     margin: 0;
@@ -40,7 +69,7 @@ html {
 }
 
 .main-container-slogan {
-    flex: 0 0 auto;
+    flex: 1 1 100%;
     align-self: center;
     padding: 0;
     margin: 0;
@@ -49,12 +78,12 @@ html {
 }
 
 .main-container-description {
-    flex: 0 0 auto;
+    flex: 1 1 100%;
     align-self: center;
     padding: 0;
     margin: 0;
     margin-top: 8px;
-    font: 400 12px Poppins, sans-serif;
+    font: 400 12px "Poppins", sans-serif;
     color: black;
     text-align: center;
 }
@@ -85,7 +114,7 @@ html {
     height: 34px;
     margin-right: 9px;
     margin-left: 8px;
-    font: 600 12px Poppins, sans-serif;
+    font: 600 12px "Poppins", sans-serif;
     color: white;
     cursor: pointer;
     background: #435334;
@@ -106,7 +135,7 @@ html {
     min-width: 146px;
     height: 34px;
     margin-top: 8px;
-    font: 600 12px Poppins, sans-serif;
+    font: 600 12px "Poppins", sans-serif;
     color: #435334;
     cursor: pointer;
     background: transparent;
@@ -125,20 +154,6 @@ html {
     flex: 0 0 auto;
     max-width: initial;
     height: 215px;
-    margin-top: 30px;
-    margin-left: -20px;
-}
-
-.main-container-layout {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 77px;
-    align-items: stretch;
-    justify-content: flex-start;
-    max-width: 360px;
-    padding-top: 83px;
-    padding-bottom: 98px;
 }
 
 .problem-section-container {
@@ -299,7 +314,7 @@ html {
 
 .solution-section-container {
     display: flex;
-    flex: 0 0 auto;
+    flex: 1 1 100%;
     flex-direction: column;
     gap: 15px;
     align-items: stretch;
@@ -309,7 +324,7 @@ html {
 
 .solution-section-header {
     display: flex;
-    flex: 0 0 auto;
+    flex: 1 1 100%;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
@@ -317,7 +332,7 @@ html {
 }
 
 .solution-header-title {
-    flex: 0 0 auto;
+    flex: 1 1 50px;
     padding: 0;
     margin: 0;
     font: italic 600 12px Poppins, sans-serif;
@@ -342,7 +357,6 @@ html {
 }
 
 .background-image1 {
-    flex: 0 0 auto;
     margin-top: 5px;
     margin-left: -20px;
 }
@@ -1102,4 +1116,142 @@ html {
     margin-top: 1px;
     font: 600 9.5px "Plus Jakarta Sans", sans-serif;
     color: #435334;
+}
+
+@media (min-width: 992px) {
+    body {
+        box-sizing: border-box;
+        width: 100%;
+        background: #f8f8f8;
+    }
+    
+    .main-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 213px;
+        align-items: stretch;
+        justify-content: space-between;
+        max-width: 1440px;
+        width: 100%;
+        padding-top: 93px;
+        padding-bottom: 113px;
+    }
+
+    .main-container-content {
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid red;
+    }
+
+    .container-profile {
+        box-sizing: border-box;
+        flex: 1 1 639px;
+        max-width: 639px;
+        padding-top: 43px;
+        margin-right: 36px;
+        margin-left: 60px;
+        align-self: center;
+        border: 3px solid blue;
+    }
+    
+    .container-text {
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid green;
+        flex: 1 1 100%;
+    }
+
+    .main-container-title, .main-container-slogan, .main-container-description {
+        align-self: flex-start;
+        text-align: justify;
+        flex: 1 1 100%;
+    }
+
+    .main-container-title {
+        font-size: 64px;
+        margin-top: -20px;
+    }
+
+    .main-container-slogan {
+        font-size: 24px;
+        margin-top: 1px;
+    }
+
+    .main-container-description {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .button-section {
+        display: block;
+        align-items: flex-start;
+        margin-left: -6px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 29px;
+    }
+
+    .shop-button {
+        box-sizing: border-box;
+        display: block;
+        flex: 0 0 auto;
+        width: 170px;
+        min-width: 170px;
+        height: 54px;
+        font: 600 15px "Poppins", sans-serif;
+        color: white;
+        cursor: pointer;
+        background: #435334;
+        border: 2px solid transparent;
+        border-radius: 50px;
+    }
+
+    .partner-button {
+        box-sizing: border-box;
+        display: block;
+        flex: 0 0 auto;
+        width: 190px;
+        min-width: 190px;
+        height: 54px;
+        margin-left: 10px;
+        margin-top: -5px;
+        font: 600 15px "Poppins", sans-serif;
+        color: #435334;
+        cursor: pointer;
+        background: transparent;
+        border: 2px solid #435334;
+        border-radius: 51px;
+    }
+
+    .main-container-image {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 680px;
+        flex-direction: column;
+        align-items: stretch;
+        align-self: center;
+        justify-content: flex-end;
+        max-width: initial;
+        height: 370px;
+    }
+
+    .main-container-image img {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        max-width: initial;
+        height: 100%;
+        margin-right: -4.25px;
+        margin-left: -4.25px;
+        object-fit: cover;
+    }
 }
