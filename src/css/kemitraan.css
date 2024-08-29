@@ -81,6 +81,12 @@ body {
     color: #569673;
 }
 
+.gabunglah-mitra-image-mobile img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .gabunglah-mitra-image img {
     width: 100%;
     height: auto;
@@ -223,6 +229,10 @@ body {
     .banner-title {
         font-size: 32px;
         /* Ukuran font lebih kecil di mobile */
+    }
+
+    .points-section {
+        margin-top: 40px !important;
     }
 
     .banner-subtext {
