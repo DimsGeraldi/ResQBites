@@ -56,6 +56,7 @@ window.addEventListener('scroll', function () {
 
 const scrollable = document.querySelector('.cards-wrapper-menu');
 const scrollableMitra = document.querySelector('.cards-wrapper-mitra');
+const scrollableReview = document.querySelector('.mitra-layout');
 scrollable.addEventListener('wheel', function (e) {
     e.preventDefault();
     // scrollable.scrollLeft += e.deltaY;
@@ -65,6 +66,11 @@ scrollableMitra.addEventListener('wheel', function (e) {
     e.preventDefault();
     // scrollable.scrollLeft += e.deltaY;
     scrollableMitra.scrollLeft += e.deltaY * 2;
+});
+scrollableReview.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    // scrollable.scrollLeft += e.deltaY;
+    scrollableReview.scrollLeft += e.deltaY * 2;
 });
 
 function increaseQuantity(element) {

@@ -5,6 +5,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --primary-color: #435334;
     --secondary-color: #3A855D;
@@ -28,8 +32,9 @@ html {
     margin-right: 0;
 }
 
-.banner-image img {
-    width: 120%;
+.banner-image img,
+.daftar-mitra-image img {
+    width: 100%;
     height: auto;
 }
 
@@ -77,11 +82,13 @@ html {
 }
 
 .gabunglah-mitra-image img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 10px 0 0 10px;
+    margin-left: -120px;
     /* Only round the left side */
 }
+
 
 .gabunglah-mitra-title {
     font-family: "Plus Jakarta Sans";
@@ -129,91 +136,6 @@ html {
     /* Ensures better readability and prevents text overlap */
 }
 
-/* Mobile Specific Styles */
-@media (max-width: 768px) {
-    .gabunglah-mitra {
-        padding: 20px 0;
-    }
-
-    .gabunglah-mitra-content {
-        flex-direction: column;
-    }
-
-    .gabunglah-mitra-text {
-        order: 1;
-        /* Teks berada di atas */
-        text-align: center;
-        /* Center text for mobile */
-        padding-bottom: 20px;
-        /* Add some space below text */
-        margin-top: 20px;
-        /* Add some space below text */
-        ;
-    }
-
-    .gabunglah-mitra-image {
-        order: 2;
-        /* Gambar berada di tengah */
-        text-align: center;
-        /* Center image for mobile */
-        margin-top: 20px;
-        /* Add margin to separate from text */
-    }
-
-    .points-section {
-        order: 3;
-        /* Poin berada di bawah gambar */
-        text-align: center;
-        /* Center points section for mobile */
-        margin-top: 20px;
-        /* Add margin to separate from image */
-    }
-
-    .gabunglah-mitra-title {
-        font-family: "Plus Jakarta Sans";
-        font-size: 1.319rem;
-    }
-
-    .gabunglah-mitra-subtext {
-        font-family: "Plus Jakarta Sans";
-        font-size: 0.875rem;
-    }
-
-    .gabunglah-mitra-image img {
-        border-radius: 0;
-        /* Remove border-radius for mobile */
-    }
-
-    .points-section {
-        align-items: center;
-    }
-
-    .point {
-        justify-content: center;
-        margin-bottom: 15px;
-        /* Adjusted margin for mobile */
-    }
-
-    .point-number {
-        width: 40px;
-        /* Adjusted width for mobile */
-        height: 40px;
-        /* Adjusted height for mobile */
-        font-size: 0.875rem;
-        margin-right: 10px;
-        /* Adjusted margin for mobile */
-    }
-
-    .point p {
-        margin-left: 5px;
-        font-size: 0.975rem;
-        /* Adjusted font size for mobile */
-        text-align: left;
-        line-height: 1.2;
-        /* Ensured line height consistency */
-    }
-}
-
 .mitra-container {
     display: flex;
     flex-direction: column;
@@ -239,7 +161,7 @@ html {
 }
 
 .mitra-layout {
-    overflow-x: auto;
+    overflow-x: scroll;
     display: flex;
     justify-content: flex-start;
     /* Mengatur konten dimulai dari kiri */
@@ -248,10 +170,21 @@ html {
     /* Menambahkan efek scroll halus */
 }
 
-.mitra-content {
-    display: flex;
-    gap: 20px;
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
 }
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
 
 .mitra-item {
     flex: 0 0 auto;
@@ -271,11 +204,14 @@ html {
 }
 
 .mitra-summary {
+    margin-top: 20px;
+    color: var(--primary-color);
     text-align: center;
-    margin-top: 40px;
-    font-weight: 500;
-    font-size: 24px;
-    color: #435334;
+    font-family: "Plus Jakarta Sans" !important;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .bold {
@@ -283,7 +219,29 @@ html {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
+    .banner-title {
+        font-size: 32px;
+        /* Ukuran font lebih kecil di mobile */
+    }
+
+    .banner-subtext {
+        width: 100%;
+    }
+
+    .gabunglah-mitra {
+        margin-top: 80px !important;
+    }
+
+    .gabunglah-mitra-title {
+        font-size: 36px;
+        /* Ukuran font lebih kecil di mobile */
+    }
+
+    .points-section p {
+        font-size: 20px;
+    }
+
     .mitra-layout {
         overflow-x: scroll;
         padding-left: 2px;
@@ -304,16 +262,25 @@ html {
     }
 
     .mitra-summary {
-        font-size: 16px;
+        font-size: 24px;
         /* Ukuran font lebih kecil di mobile */
         margin-top: 20px;
         /* Mengurangi jarak atas untuk mobile */
     }
+
+    .gabunglah-mitra-image {
+        display: none;
+    }
+
+    .daftar-mitra-title {
+        font-size: 44px !important;
+        /* Ukuran font lebih kecil di mobile */
+    }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
     .mitra-layout {
-        overflow-x: auto;
+        overflow-x: scroll;
         padding-left: 20px;
         /* Menambahkan ruang agar gambar pertama terlihat utuh */
     }
@@ -322,6 +289,10 @@ html {
         min-width: 400px;
         /* Gambar lebih besar pada desktop */
         max-width: 400px;
+    }
+
+    .gabunglah-mitra-image-mobile {
+        display: none;
     }
 }
 
@@ -346,7 +317,6 @@ html {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: end;
-    padding-left: 20px;
     /* Padding only on the left */
     padding-right: 0;
     /* No padding on the right */
@@ -355,21 +325,7 @@ html {
 .daftar-mitra-text {
     flex: 1;
     padding: 20px;
-    margin-bottom: 100px;
-}
-
-.daftar-mitra-image {
-    flex: 1;
-    text-align: right;
-    padding: 0;
-    margin-right: 0;
-}
-
-.daftar-mitra-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px 0 0 10px;
-    /* Only round the left side */
+    /* margin-bottom: 100px; */
 }
 
 .daftar-mitra-title {
@@ -395,40 +351,5 @@ html {
     border-radius: 31px;
     padding: 15px 20px;
     font-weight: bold;
-}
-
-/* Mobile Specific Styles */
-@media (max-width: 768px) {
-    .daftar-mitra {
-        padding: 20px 0;
-    }
-
-    .daftar-mitra-text {
-        text-align: center;
-        order: 2;
-        /* Center text for mobile */
-    }
-
-    .daftar-mitra-title {
-        font-family: "Plus Jakarta Sans";
-        font-size: 1.65rem;
-    }
-
-    .daftar-mitra-subtext {
-        font-family: "Plus Jakarta Sans";
-        font-size: 0.875rem;
-    }
-
-    .daftar-mitra-content {
-        flex-direction: column;
-    }
-
-    .daftar-mitra-image {
-        order: 1;
-    }
-
-    .daftar-mitra-image img {
-        border-radius: 0;
-        /* Remove border-radius for mobile */
-    }
+    border: 2px solid var(--primary-color);
 }
