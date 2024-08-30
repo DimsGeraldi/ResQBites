@@ -158,7 +158,7 @@ h2 {
     font-weight: bold;
 }
 
-.login-image img {
+.login-image-regmitra img {
     width: 80%;
     /* Atur ukuran gambar agar proporsional */
     height: auto;
@@ -182,7 +182,7 @@ h2 {
         padding: 40px;
     }
 
-    .login-image {
+    .login-image-regmitra {
         position: sticky !important;
         display: flex;
         width: 50%;
@@ -192,7 +192,7 @@ h2 {
         /* Tambahkan padding horizontal untuk memberikan ruang */
     }
 
-    .login-image img {
+    .login-image-regmitra img {
         /* width: 1000%; */
         object-fit: fill;
         visibility: hidden;
@@ -202,16 +202,20 @@ h2 {
         width: 50%;
         position: fixed;
         right: 0;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
         overflow: hidden;
-        background-color: #3A855D;
+        /* background-color: #3A855D; */
     }
 
     .login-image-fixed img {
-        width: 100%;
+        width: auto;
+        height: 100%;
         object-fit: cover;
-        margin: auto;
-        border-radius: 100px;
+        /* position: absolute; */
+        transform: translateX(20%);
+        /* top: 50%; */
+        /* transform: translateY(-50%); */
 
     }
 }
