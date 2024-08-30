@@ -69,6 +69,7 @@ html {
 
 .profile-description {
     font-family: "Plus Jakarta Sans";
+    font-weight: 500;
     color: #000;
     margin: -10px 0;
     font-size: 1.2rem;
@@ -147,18 +148,24 @@ html {
 
     .profile-description {
         font-size: 1rem;
+        text-align: center;
     }
 
     .profile-image {
-        justify-content: end;
+        text-align: center;
+        margin-top: 10px;
     }
 
     .profile-image img {
         border-radius: 0;
     }
 
+    .profile-button1, .profile-button2 {
+        font-size: 1rem;
+    }
     .profile-button2 {
         margin-left: 0px;
+        margin-top: 10px;
     }
 }
 
@@ -192,11 +199,8 @@ html {
 }
 
 .problem-title {
-    font-family: "Poppins";
-    font-weight: 600;
+    font: italic 600 1.25rem "Poppins", sans-serif;
     color: #435334;
-    font-size: 1.25rem;
-    font-style: italic;
     text-align: center;
     letter-spacing: 6.2px;
 }
@@ -252,11 +256,9 @@ html {
 }
 
 .problem-points-image {
-    box-sizing: border-box;
     display: block;
-    width: 60px;
     max-width: initial;
-    height: 60px;
+    object-fit: cover;
 }
 
 .problem-points-text {
@@ -297,29 +299,28 @@ html {
 
     .problem-title {
         font-family: "Plus Jakarta Sans";
-        font-size: 2rem;
+        font-size: 12px;
     }
 
-    .profile-slogan {
-        font-family: "Plus Jakarta Sans";
+    .problem-description {
         font-size: 1.2rem;
     }
 
-    .profile-description {
-        font-size: 1rem;
+    .problem-main {
+        flex-direction: column;
     }
 
-    .profile-image {
-        justify-content: end;
+    .problem-image {
+        text-align: center;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
     }
 
-    .profile-image img {
-        border-radius: 0;
-    }
-
-    .profile-button2 {
-        margin-left: 0px;
-        margin-top: 10px;
+    .problem-image img {
+        text-align: center;
+        height: 200px !important;
+        width: auto;
     }
 }
 
@@ -414,6 +415,54 @@ html {
     font: 500 1.5rem "Poppins", sans-serif;
     color: white;
     white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+    .solution-section {
+        padding: 20px 0;
+    }
+
+    .solution-content {
+        flex-direction: column;
+    }
+
+    .solution-text {
+        text-align: center;
+        align-items: start;
+        margin-top: 40px;
+        margin-left: 15px;
+    }
+
+    .solution-title {
+        font-size: 1rem;
+    }
+
+    .solution-description {
+        font-size: 1.2rem;
+    }
+
+    .solution-image {
+        text-align: center;
+    }
+
+    .solution-points-group {
+        gap: 10px;
+    }
+
+    .solution-points {
+        padding: 7px 16px;
+    }
+
+    .solution-points-image {
+        height: 27px;
+        width: 27px;
+    }
+    
+    .solution-points-text {
+        font-size: 14px;
+        margin-left: 10px;
+        text-align: left !important;
+    }
 }
 
 .about-us-section {
@@ -782,7 +831,7 @@ html {
 .founders-card-layout {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 63px;
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 27px;
