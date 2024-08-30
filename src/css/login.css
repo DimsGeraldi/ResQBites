@@ -209,13 +209,17 @@ h2 {
     }
 
     .login-image-fixed img {
-        width: auto;
-        height: 100%;
-        object-fit: cover;
-        /* position: absolute; */
-        transform: translateX(20%);
-        /* top: 50%; */
-        /* transform: translateY(-50%); */
+        width: 80%;
+        /* Lebar gambar mengikuti lebar kontainer */
+        height: 10%;
+        /* Tinggi gambar mengikuti tinggi kontainer */
+        object-fit: contain;
+        /* Gambar akan terlihat seluruhnya dengan menjaga rasio aspek */
+        position: relative;
+        /* Set posisi menjadi relative */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
 
     }
 }
@@ -235,11 +239,16 @@ h2 {
 
     .login-container {
         display: flex;
-        flex-direction: row; /* To keep the login form and image side by side */
-        justify-content: flex-start; /* Align content to the top */
-        align-items: flex-start; /* Ensure items are aligned at the top */
-        min-height: 100vh; /* Ensure container takes full viewport height */
-        padding-top: 20px; /* Optional: Adjust the space from the top */
+        flex-direction: row;
+        /* To keep the login form and image side by side */
+        justify-content: flex-start;
+        /* Align content to the top */
+        align-items: flex-start;
+        /* Ensure items are aligned at the top */
+        min-height: 100vh;
+        /* Ensure container takes full viewport height */
+        padding-top: 20px;
+        /* Optional: Adjust the space from the top */
     }
-    
+
 }
