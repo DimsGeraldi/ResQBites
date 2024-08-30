@@ -782,7 +782,7 @@ html {
 .founders-card-layout {
     display: flex;
     flex-direction: row;
-    gap: 63px;
+    gap: 50px;
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 27px;
