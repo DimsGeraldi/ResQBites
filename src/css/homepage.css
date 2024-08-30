@@ -128,7 +128,7 @@ body {
     border-radius: 10px 0 0 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
     .profile-section {
         padding: 20px 0;
     }
@@ -165,9 +165,11 @@ body {
         border-radius: 0;
     }
 
-    .profile-button1, .profile-button2 {
+    .profile-button1,
+    .profile-button2 {
         font-size: 1rem;
     }
+
     .profile-button2 {
         margin-left: 0px;
         margin-top: 10px;
@@ -177,24 +179,12 @@ body {
 .problem-section {
     background-color: #f8f8f8;
     padding: 50px 0;
-    display: flex;
-    justify-content: center;
     align-items: center;
     min-height: 400px;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
-.problem-content {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: start;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.problem-text {
+.problem-content .problem-text {
     flex: 1;
     padding: 0;
     margin: 0;
@@ -224,30 +214,23 @@ body {
     flex-direction: row;
     align-items: stretch;
     justify-content: flex-start;
-    margin: 40px 20px;
 }
 
 .problem-image {
-    display: block;
-    flex: 1;
     padding: 0;
-    margin-left: 20px;
-    max-width: 100%;
 }
 
 .problem-image img {
-    width: 100%;
-    height: 100%;
+    width: 10%;
     object-fit: cover;
     border-radius: 10px;
 }
 
 .problem-points-group {
     display: flex;
-    flex: 1;
+
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 30px;
     gap: 30px;
 }
 
@@ -289,7 +272,7 @@ body {
     text-align: justify;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
     .problem-section {
         padding: 20px 0;
     }
@@ -376,7 +359,7 @@ body {
     margin: 0;
     font: italic 600 1.25rem "Poppins", sans-serif;
     color: #435334;
-    letter-spacing: 6.2px; 
+    letter-spacing: 6.2px;
 }
 
 .solution-description {
@@ -422,7 +405,7 @@ body {
     white-space: pre-wrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
     .solution-section {
         padding: 20px 0;
     }
@@ -462,7 +445,7 @@ body {
         height: 27px;
         width: 27px;
     }
-    
+
     .solution-points-text {
         font-size: 14px;
         margin-left: 10px;
@@ -713,7 +696,7 @@ body {
 .mitra-title {
     font: italic 600 1.25rem "Plus Jakarta Sans";
     color: #435334;
-    letter-spacing: 6.2px; 
+    letter-spacing: 6.2px;
 }
 
 /**/
@@ -724,7 +707,7 @@ body {
 .join-slogan {
     font: italic 600 1.25rem "Plus Jakarta Sans";
     color: #435334;
-    letter-spacing: 6.2px; 
+    letter-spacing: 6.2px;
 }
 
 .join-image {
@@ -810,7 +793,7 @@ body {
 .founders-title {
     font: italic 600 1.25rem "Poppins";
     color: #435334;
-    letter-spacing: 6.2px; 
+    letter-spacing: 6.2px;
 }
 
 .founders-description {

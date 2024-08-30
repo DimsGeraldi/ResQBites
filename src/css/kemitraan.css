@@ -68,7 +68,8 @@ strong {
     margin-block: 20px;
 }
 
-.banner-button {
+.banner-button,
+.daftar-mitra-button {
     color: #FFF;
     text-align: center;
     font-family: Poppins;
@@ -79,8 +80,30 @@ strong {
     background-color: var(--primary-color);
     padding: 16px 32px;
     border-radius: 60px;
+    border: 3px solid var(--primary-color);
 }
 
+.banner-button:hover,
+.daftar-mitra-button:hover {
+    color: var(--primary-color);
+    background-color: #ffffff;
+    border: 3px solid var(--primary-color);
+}
+
+.banner-button-secondary {
+    color: var(--primary-color);
+    background-color: #ffffff;
+    border: 3px solid transparent;
+}
+
+.banner-button-secondary:hover {
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+}
+
+.banner-image-index img {
+    width: 120%;
+}
 
 .color-custom-strong {
     color: #569673;

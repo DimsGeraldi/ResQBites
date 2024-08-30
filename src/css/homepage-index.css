@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    background-color: #f8f8f8;
+}
+
+:root {
+    --primary-color: #435334;
+    --secondary-color: #3A855D;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+strong {
+    font-weight: 800 !important;
+}
+
+section#hero,
+section#problem,
+section#solution,
+section#about-us,
+section.mitra-container,
+section.daftar-mitra {
+    padding: 60px 0;
+}
+
+h1 {
+    color: #3A855D;
+    font-family: "Plus Jakarta Sans";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #435334;
+    font-family: "Plus Jakarta Sans";
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+p {
+    color: #000;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+p span {
+    font-weight: 800;
+    color: #3A855D;
+    font-style: italic;
+}
+
+h3 {
+    color: #435334;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+h3 span {
+    font-weight: 500;
+}
+
+h5 {
+    color: #435334;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 150.015%;
+    /* 30.003px */
+    letter-spacing: 6.2px;
+    margin-bottom: 0;
+}
+
+.hero-subtitle {
+    margin-block: 40px;
+}
+
+.problem-image img {
+    width: 95%;
+}
+
+.problem-point img {
+    width: 80px;
+}
+
+.problem-point h1 {
+    color: #435334;
+    font-family: "Plus Jakarta Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 136.913%;
+    text-align: left;
+    /* 38.336px */
+}
+
+.problem-point p {
+    color: #000;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 136.913%;
+    /* 27.383px */
+}
+
+.solution-points-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.solution-points {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 24px;
+    background: #435334;
+    border-radius: 34px;
+}
+
+.solution-points-text {
+    padding: 0;
+    margin: 0;
+    margin-left: 21px;
+    font: 500 24px "Poppins", sans-serif;
+    color: white;
+    white-space: pre-wrap;
+}
+
+.about-us-image img {
+    width: 80%;
+}
+
+.about-us-vm-title {
+    width: 24%;
+    padding: 12px 24px;
+    border-radius: 26px 26px 26px 0px;
+    background-color: var(--primary-color);
+    font: 800 1.25rem Poppins, sans-serif;
+    color: white;
+    margin-bottom: 0;
+}
+
+.about-us-v-title {
+    width: 20%;
+}
+
+.about-us-vm-content {
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 0px 12px 12px 12px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid #b6b6b6;
+}
+
+.about-us-vm-description {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font: 500 18px Poppins, sans-serif;
+    color: #435334;
+    text-align: left;
+}
+
+.daftar-mitra-subtext {
+    width: 100% !important;
+}
+
+@media (max-width: 991.98px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .hero-subtitle {
+        margin-top: 16px;
+        margin-bottom: 20=2px;
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .banner-image {
+        margin-top: 20px;
+        overflow-x: hidden;
+    }
+
+    .banner-image-index img {
+        width: 120% !important;
+    }
+
+    .problem-image img {
+        width: 100%;
+    }
+
+    .problem-point img {
+        width: 60px;
+    }
+
+    .problem-point h1 {
+        font-size: 22px;
+    }
+
+    .problem-point p {
+        font-size: 16px;
+    }
+
+    .solution-points-group {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .solution-points {
+        padding: 8px 16px;
+        border-radius: 24px;
+    }
+
+    .solution-points-text {
+        margin-left: 12px;
+        font-size: 16px;
+    }
+
+    .solution-pretitle,
+    .solution-title {
+        display: none;
+    }
+
+    .solution-title-mobile {
+        line-height: 1.3;
+    }
+
+    .about-us-v-title {
+        width: 24%;
+    }
+
+    .about-us-vm-description {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .solution-pretitle-mobile,
+    .solution-title-mobile {
+        display: none;
+    }
+}
