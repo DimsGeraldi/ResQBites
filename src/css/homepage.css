@@ -691,6 +691,11 @@ html {
     color: #435334;
 }
 
+.join-highlight-text {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 700;
+}
+
 .join-description {
     font-family: "Poppins";
     font-size: 1.5rem;
