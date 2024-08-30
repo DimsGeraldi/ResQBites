@@ -5,6 +5,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+    background-color: #f8f8f8;
+}
+
 :root {
     --primary-color: #435334;
     --secondary-color: #3A855D;
@@ -610,177 +615,165 @@ html {
     text-align: left;
 }
 
-.review-section {
+.mitra-container {
+    position: relative;
     display: flex;
     flex-direction: column;
-    padding: 50px 0;
-    background-color: #f8f8f8;
+    padding: 20px;
 }
 
-.review-header {
+.kutip-up {
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    height: 32px;
+    border-radius: 0 !important;
+}
+
+.kutip-down {
+    position: absolute;
+    bottom: 200px;
+    right: 60px;
+    height: 32px;
+    border-radius: 0 !important;
+}
+
+.mitra-header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.review-title {
-    font: italic 600 1.25rem "Poppins";
-    color: #435334;
-    letter-spacing: 6.2px; 
-}
-
-.review-description {
-    font-family: "Plus Jakarta Sans";
+.mitra-description {
     font-weight: 500;
+    font-size: 40px;
     color: #435334;
-    font-size: 2rem;
     margin-bottom: 40px;
 }
 
-.review-layout {
-    overflow-x: auto;
-    display: flex;
-    justify-content: flex-start; /* Mengatur konten dimulai dari kiri */
-    padding-bottom: 20px;
-    scroll-behavior: smooth; /* Menambahkan efek scroll halus */
+.highlight {
+    font-weight: 800;
 }
 
-.review-item-icon-up {
-    box-sizing: border-box;
-    display: block;
-    width: 43px;
-    max-width: initial;
-    height: 37px;
-}
-
-.review-item-icon-down {
-    box-sizing: border-box;
-    display: block;
-    width: 43px;
-    max-width: initial;
-    height: 37px;
-    margin-top: 355px;
-}
-
-.review-content {
+.mitra-layout {
+    overflow-x: scroll;
     display: flex;
     gap: 20px;
+    justify-content: flex-start;
+    /* Mengatur konten dimulai dari kiri */
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+    /* Menambahkan efek scroll halus */
 }
 
-.review-item {
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+
+.mitra-item {
     flex: 0 0 auto;
 }
 
-.review-image {
+.mitra-image {
     width: 100%;
     height: auto;
     border-radius: 12px;
 }
 
 /* Batas tampilan gambar pertama terlihat penuh di desktop */
-.review-content::before {
+.mitra-content::before {
     content: '';
     min-width: 10px;
+    /* Tambahkan padding kiri di awal */
 }
 
-.review-summary {
+
+.mitra-summary {
+    margin-top: 50px;
+    color: var(--primary-color);
     text-align: center;
-    margin-top: 40px;
-    padding: 0 100px;
-    font-family: "Plus Jakarta Sans";
-    font-weight: 400;
-    font-size: 40px;
-    color: #435334;
-}
-
-.review-highlight-text {
-    font-family: "Plus Jakarta Sans";
+    font-family: "Plus Jakarta Sans" !important;
+    font-size: 34px;
+    font-style: normal;
     font-weight: 700;
+    line-height: normal;
 }
 
-.join-section {
-    background-color: #f8f8f8;
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    overflow-x: hidden;
-}
-
-.join-content {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 0;
-}
-
-.join-text {
-    flex: 1;
-    padding: 20px;
-    margin: 0 40px 0 40px;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.join-title {
-    font-family: "Poppins";
-    font-weight: 500;
+.mitra-title {
+    font: italic 600 1.25rem "Plus Jakarta Sans";
     color: #435334;
-    font-size: 1.25rem;
-    font-style: italic;
-    text-align: left;
-    letter-spacing: 6.2px;
+    letter-spacing: 6.2px; 
+}
+
+/**/
+.color-custom-strong {
+    color: #569673;
 }
 
 .join-slogan {
-    font: 500 2.5rem "Plus Jakarta Sans";
+    font: italic 600 1.25rem "Plus Jakarta Sans";
     color: #435334;
-}
-
-.join-highlight-text {
-    font-family: "Plus Jakarta Sans";
-    font-weight: 700;
-}
-
-.join-description {
-    font-family: "Poppins";
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: black;
-    text-align: justify;
-    margin: 0;
-}
-
-.join-button {
-    font-family: "Plus Jakarta Sans";
-    background-color: #435334;
-    color: white;
-    border-radius: 31px;
-    padding: 12px 24px;
-    margin-top: 30px;
-    font-weight: bold;
-    font-size: 1.25rem;
-}
-
-.join-button:hover {
-    background-color: #3a855d;
-    color: white;
+    letter-spacing: 6.2px; 
 }
 
 .join-image {
-    flex: 1;
     text-align: right;
     padding: 0;
     margin-right: 0;
 }
 
 .join-image img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 10px 0 0 10px;
+    margin-right: -110px;
+    /* Only round the left side */
+}
+
+.join-title {
+    color: #435334;
+    font-family: "Plus Jakarta Sans";
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.join-subtext {
+    color: #000;
+    text-align: justify;
+    font-family: "Plus Jakarta Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 80%;
+    margin-block: 20px;
+}
+
+.join-button {
+    margin-top: 10px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background-color: var(--primary-color);
+    padding: 16px 32px;
+    border-radius: 60px;
 }
 
 .founders-section {
@@ -878,4 +871,95 @@ html {
     font: 500 1.125rem "Plus Jakarta Sans", sans-serif;
     color: #435334;
     text-align: center;
+}
+
+@media (max-width: 991.98px) {
+    .kutip-up {
+        position: absolute;
+        top: 100px;
+        left: 10px;
+        height: 16px;
+        border-radius: 0 !important;
+    }
+
+    .kutip-down {
+        position: absolute;
+        bottom: 120px;
+        right: 10px;
+        height: 16px;
+        border-radius: 0 !important;
+    }
+
+    .mitra-layout {
+        overflow-x: scroll;
+        padding-left: 2px;
+        /* Mengurangi jarak kiri di mobile */
+    }
+
+    .mitra-item {
+        min-width: 60%;
+        max-width: 60%;
+    }
+
+    .mitra-title {
+        font-size: 12px;
+    }
+
+    /* Adjusting text size for mobile */
+    .mitra-description {
+        margin-bottom: 10px;
+        font-size: 24px;
+        /* Ukuran font lebih kecil di mobile */
+    }
+
+    .mitra-summary {
+        font-size: 20px;
+        /* Ukuran font lebih kecil di mobile */
+        margin-top: 20px;
+        /* Mengurangi jarak atas untuk mobile */
+    }
+
+    .join-slogan {
+        font-size: 12px;
+    }
+
+    .join-title {
+        margin-top: 20px;
+        font-size: 24px;
+        /* Ukuran font lebih kecil di mobile */
+    }
+
+
+    .join-subtext {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .join-image {
+        overflow-x: hidden;
+    }
+
+    .join-image img {
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        border-radius: 10px 0 0 10px;
+        margin-right: -50px;
+        /* Only round the left side */
+    }
+}
+
+@media (min-width: 992px) {
+    .mitra-layout {
+        overflow-x: scroll;
+        padding-left: 20px;
+        /* Menambahkan ruang agar gambar pertama terlihat utuh */
+    }
+
+    .mitra-item {
+        min-width: 400px;
+        /* Gambar lebih besar pada desktop */
+        max-width: 400px;
+    }
 }
