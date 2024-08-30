@@ -158,10 +158,6 @@ h2 {
     font-weight: bold;
 }
 
-.login-image {
-    display: none;
-}
-
 .login-image img {
     width: 80%;
     /* Atur ukuran gambar agar proporsional */
@@ -174,7 +170,7 @@ h2 {
     /* Opsional: tambah border-radius jika ingin rounded corners */
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .login-container {
         flex-direction: row;
         /* height: 100vh; */
@@ -187,18 +183,45 @@ h2 {
     }
 
     .login-image {
+        position: sticky !important;
         display: flex;
         width: 50%;
-        height: 100vh;
         align-items: center;
         justify-content: center;
-        padding: 0 20px;
+        visibility: hidden;
         /* Tambahkan padding horizontal untuk memberikan ruang */
     }
 
     .login-image img {
-        width: 1000%;
+        /* width: 1000%; */
         object-fit: fill;
-        margin-left: 100px;
+        visibility: hidden;
+    }
+
+    .login-image-fixed {
+        width: 50%;
+        position: fixed;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        background-color: #3A855D;
+    }
+
+    .login-image-fixed img {
+        width: 100%;
+        object-fit: cover;
+        margin: auto;
+        border-radius: 100px;
+
+    }
+}
+
+@media (max-width: 1400px) {
+    .login-image {
+        display: none;
+    }
+
+    .login-image-fixed {
+        display: none;
     }
 }

@@ -10,9 +10,17 @@ body {
     background-color: #f8f8f8;
 }
 
+strong {
+    font-weight: 700 !important;
+}
+
 :root {
     --primary-color: #435334;
     --secondary-color: #3A855D;
+}
+
+.join-title {
+    margin-bottom: -5px !important;
 }
 
 .color-custom-strong {
@@ -114,6 +122,7 @@ body {
     /* Increase bottom margin for better spacing */
 }
 
+
 .point-number {
     background-color: #435334;
     color: #fff;
@@ -135,15 +144,33 @@ body {
     color: #435334;
     margin: 0;
     font-size: 1.65rem;
+    font-weight: 600;
     /* Larger font size */
     line-height: 1.2;
     /* Ensures better readability and prevents text overlap */
 }
 
 .mitra-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 20px;
+}
+
+.kutip-up {
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    height: 32px;
+    border-radius: 0 !important;
+}
+
+.kutip-down {
+    position: absolute;
+    bottom: 200px;
+    right: 60px;
+    height: 32px;
+    border-radius: 0 !important;
 }
 
 .mitra-header {
@@ -173,6 +200,8 @@ body {
     scroll-behavior: smooth;
     /* Menambahkan efek scroll halus */
 }
+
+
 
 ::-webkit-scrollbar {
     height: 8px;
@@ -242,7 +271,7 @@ body {
     font-family: "Plus Jakarta Sans";
     font-size: 43px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 600;
     line-height: normal;
 }
 
@@ -274,6 +303,22 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 991.98px) {
+    .kutip-up {
+        position: absolute;
+        top: 100px;
+        left: 10px;
+        height: 16px;
+        border-radius: 0 !important;
+    }
+
+    .kutip-down {
+        position: absolute;
+        bottom: 120px;
+        right: 10px;
+        height: 16px;
+        border-radius: 0 !important;
+    }
+
     .banner-title {
         font-size: 32px;
         /* Ukuran font lebih kecil di mobile */

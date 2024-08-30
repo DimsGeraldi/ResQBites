@@ -27,6 +27,10 @@ img {
     border-radius: 10px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .sacrificial-afternav {
     height: 80px;
 }
@@ -78,11 +82,11 @@ nav .navbar-brand2 {
 
 .navbar-nav .dropdown-menu .dropdown-item:hover {
     background-color: #435334;
-    color: #fff; 
+    color: #fff;
 }
 
-.offcanvas-body .nav-item.d-lg-none + .nav-item.d-lg-none {
-	margin-top: 60px; 
+.offcanvas-body .nav-item.d-lg-none+.nav-item.d-lg-none {
+    margin-top: 60px;
 }
 
 .fas {
