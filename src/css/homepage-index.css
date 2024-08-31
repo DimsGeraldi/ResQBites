@@ -41,7 +41,8 @@ section#problem,
 section#solution,
 section#about-us,
 section.mitra-container,
-section.daftar-mitra {
+section.daftar-mitra,
+section.founders-section {
     padding: 60px 0;
 }
 
@@ -174,7 +175,6 @@ h5 {
 }
 
 .about-us-vm-title {
-    width: 24%;
     padding: 12px 24px;
     border-radius: 26px 26px 26px 0px;
     background-color: var(--primary-color);
@@ -183,9 +183,6 @@ h5 {
     margin-bottom: 0;
 }
 
-.about-us-v-title {
-    width: 20%;
-}
 
 .about-us-vm-content {
     box-sizing: border-box;
@@ -207,6 +204,44 @@ h5 {
 
 .daftar-mitra-subtext {
     width: 100% !important;
+}
+
+.founders-card-layout {
+
+    gap: 100px;
+}
+
+.founders-card img {
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+.founders-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.founders-card-name {
+    color: #435334;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.founders-card-position {
+    color: #435334;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 18.68px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 @media (max-width: 991.98px) {
@@ -300,6 +335,12 @@ h5 {
 
     .about-us-vm-description {
         font-size: 14px;
+    }
+
+    .founders-card-layout {
+        overflow-x: scroll;
+        gap: 50px;
+        padding-inline: 40px;
     }
 }
 
