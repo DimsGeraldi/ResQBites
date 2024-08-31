@@ -71,7 +71,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="admin-profile.html">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
@@ -80,7 +80,7 @@
               <hr class="dropdown-divider">
             </li>
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="index.html">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -143,8 +143,7 @@
         <div class="col-lg-12">
 
           <div class="card">
-            <div class="card-body">
-              
+            <div class="table-responsive">
               <table class="table datatable">
                 <thead>
                   <tr>
@@ -157,27 +156,29 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><img src="assets/img/roti-selai-kacang.svg"></td>
-                    <td>Roti Selai Kacang</td>
-                    <td>Roti Garing dengan selai kacang premium dan juga butiran butiran kacang.</td>
-                    <td>Rp 25.000</td>
-                    <td>
+                    <td data-label="Foto"><img src="assets/img/roti-selai-kacang.svg"></td>
+                    <td data-label="Nama Produk">Roti Selai Kacang</td>
+                    <td data-label="Deskripsi Produk">Roti Garing dengan selai kacang premium dan juga butiran butiran kacang.</td>
+                    <td data-label="Harga">Rp 25.000</td>
+                    <td data-label="Edit / Hapus">
                       <button class="btn btn-warning rounded-pill"><strong>Edit</strong></button>
                       <button class="btn btn-danger rounded-pill"><strong>Hapus</strong></button>
                     </td>
                   </tr>
                   <tr>
-                    <td><img src="assets/img/bolu-pisang.svg"></td>
-                    <td>Bolu Pisang</td>
-                    <td>Bolu Lembut dengan potongan pisang dan selai coklat.</td>
-                    <td>Rp 13.000</td>
-                    <td><button class="btn btn-warning rounded-pill"><strong>Edit</strong></button>
+                    <td data-label="Foto"><img src="assets/img/bolu-pisang.svg"></td>
+                    <td data-label="Nama Produk">Bolu Pisang</td>
+                    <td data-label="Deskripsi Produk">Bolu Lembut dengan potongan pisang dan selai coklat.</td>
+                    <td data-label="Harga">Rp 13.000</td>
+                    <td data-label="Edit / Hapus">
+                      <button class="btn btn-warning rounded-pill"><strong>Edit</strong></button>
                       <button class="btn btn-danger rounded-pill"><strong>Hapus</strong></button>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            
           </div>
 
         </div>
