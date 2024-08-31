@@ -74,73 +74,6 @@ function initializeDeliveryPickup() {
     }
 }
 
-// Initialize Map and Address Change
-function initializeAddressChange() {
-    const changeAddressBtn = document.getElementById('change-address-btn');
-    if (changeAddressBtn) {
-        changeAddressBtn.addEventListener('click', function () {
-            document.getElementById('map-modal').style.display = 'block';
-            let map = L.map('map').setView([-6.200000, 106.816666], 13);
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-            }).addTo(map);
-
-            let marker = L.marker([-6.200000, 106.816666]).addTo(map);
-
-            function updateAddress(lat, lon) {
-                fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        document.getElementById('address-display').innerText = data.display_name;
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('Gagal mendapatkan alamat, coba lagi.');
-                    });
-            }
-
-            function locateAndUpdate() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function (position) {
-                        let lat = position.coords.latitude;
-                        let lon = position.coords.longitude;
-                        map.setView([lat, lon], 13);
-                        marker.setLatLng([lat, lon]);
-                        updateAddress(lat, lon);
-                    }, function () {
-                        alert("Tidak dapat mengakses lokasi Anda.");
-                    });
-                } else {
-                    alert("Geolokasi tidak didukung oleh browser Anda.");
-                }
-            }
-
-            locateAndUpdate();
-
-            map.on('click', function (e) {
-                let lat = e.latlng.lat;
-                let lon = e.latlng.lng;
-                marker.setLatLng([lat, lon]);
-                updateAddress(lat, lon);
-            });
-
-            document.getElementById('locate-me-btn').addEventListener('click', locateAndUpdate);
-            document.getElementById('confirm-address-btn').addEventListener('click', function () {
-                document.getElementById('map-modal').style.display = 'none';
-            });
-            document.getElementById('close-btn').addEventListener('click', function () {
-                document.getElementById('map-modal').style.display = 'none';
-            });
-            window.onclick = function (event) {
-                if (event.target == document.getElementById('map-modal')) {
-                    document.getElementById('map-modal').style.display = 'none';
-                }
-            };
-        });
-    }
-}
-
 // Initialize Scrollable Elements
 function initializeScrollable() {
     const scrollableElements = [
@@ -190,14 +123,94 @@ function initializeNavShadow() {
     }
 }
 
+// Initialize the address modal
+function initializeAddressModal() {
+    const addressModalElement = document.getElementById('address-modal');
+    if (addressModalElement) {
+        const addressModal = new bootstrap.Modal(addressModalElement);
+
+        // Attach event listener to the change address button
+        const changeAddressBtn = document.getElementById('change-address-btn');
+        if (changeAddressBtn) {
+            changeAddressBtn.addEventListener('click', function () {
+                showAddressModal(addressModal);
+            });
+        } else {
+            console.error('Change address button not found.');
+        }
+
+        // Attach event listener to the address form
+        const addressForm = document.getElementById('address-form');
+        if (addressForm) {
+            addressForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                updateAddressDisplay();
+                hideAddressModal(addressModal);
+            });
+        } else {
+            console.error('Address form not found.');
+        }
+    } else {
+        console.error('Address modal element not found.');
+    }
+}
+
+/**
+ * Show the address modal
+ * @param {bootstrap.Modal} modal - The bootstrap modal instance
+ */
+function showAddressModal(modal) {
+    modal.show();
+}
+
+/**
+ * Hide the address modal
+ * @param {bootstrap.Modal} modal - The bootstrap modal instance
+ */
+function hideAddressModal(modal) {
+    modal.hide();
+}
+
+/**
+ * Update the address display with the values from the form
+ */
+function updateAddressDisplay() {
+    const street = getFormValue('street');
+    const rt = getFormValue('rt');
+    const rw = getFormValue('rw');
+    const houseNumber = getFormValue('houseNumber');
+    const subdistrict = getFormValue('subdistrict');
+    const district = getFormValue('district');
+    const city = getFormValue('city');
+    const province = getFormValue('province');
+    const postalCode = getFormValue('postalCode');
+
+    const addressDisplay = document.getElementById('address-display');
+    if (addressDisplay) {
+        addressDisplay.textContent = `${street}, RT ${rt} RW ${rw}, No ${houseNumber}, Kelurahan ${subdistrict}, Kecamatan ${district}, Kota ${city}, Provinsi ${province}, Kode Pos ${postalCode}`;
+    } else {
+        console.error('Address display element not found.');
+    }
+}
+
+/**
+ * Get the value of a form input by its ID
+ * @param {string} id - The ID of the form input
+ * @returns {string} - The value of the form input
+ */
+function getFormValue(id) {
+    const element = document.getElementById(id);
+    return element ? element.value : '';
+}
+
 // Initialize all components
 document.addEventListener('DOMContentLoaded', function () {
     initializeAOS();
     initializeOffcanvas();
     initializeOrderFilter();
     initializeDeliveryPickup();
-    initializeAddressChange();
     initializeScrollable();
     initializeQuantityControls();
     initializeNavShadow();
+    initializeAddressModal();
 });
