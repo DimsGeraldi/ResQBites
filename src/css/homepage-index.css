@@ -350,4 +350,8 @@ h5 {
     .solution-title-mobile {
         display: none;
     }
+
+    .mitra-summary {
+        width: 50%;
+    }
 }
