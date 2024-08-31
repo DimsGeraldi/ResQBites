@@ -1,3 +1,7 @@
+function goBack() {
+    window.history.back();
+}
+
 // Initialize AOS
 function initializeAOS() {
     AOS.init();
