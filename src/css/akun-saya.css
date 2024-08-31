@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #435334;
+    --secondary-color: #3A855D;
+}
+
+.icon-title img {
+    width: 60px;
+}
+
+.judul-profile-title {
+    color: #435334;
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.left-card {
+    padding: 32px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+
+}
+
+.right-card {
+    padding: 32px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+
+}
+
+.profile-title {
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: "Plus Jakarta Sans";
+}
+
+.profile-email {
+    font-size: 18px;
+    font-family: "Plus Jakarta Sans";
+}
+
+.metode-title {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.product-button button {
+    background-color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 15px
+}
+
+/* Modal styling */
+.map-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black with opacity */
+}
+
+.map-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-body h5.card-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: bold;
+    color: #3A855D;
+    font-family: "Plus Jakarta Sans";
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+.row .col-lg-3, .row .col-md-4 {
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+}
+
+.row .col-lg-9, .row .col-md-8 {
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    color: #212529;
+}
+
+.nav-tabs-bordered .nav-link {
+    border: none;
+    color: #3A855D;
+    font-family: "Plus Jakarta Sans";
+}
+
+.nav-tabs-bordered .nav-link.active {
+    color: #3A855D;
+    border-bottom: 2px solid #3A855D;
+    background: none;
+}
+
+
+/* Profile Image and Buttons */
+#profile-edit img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#profile-edit .pt-2 a {
+    margin-right: 5px;
+}
+
+#profile-edit .btn-primary {
+    background-color: #3A855D;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: "Plus Jakarta Sans";
+}
+
+#profile-edit .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: "Plus Jakarta Sans";
+}
+
+/* Label Styling */
+.row label {
+    font-weight: bold;
+    color: #3A855D;
+    font-size: 14px;
+    font-family: "Plus Jakarta Sans";
+}
+
+/* Form Fields */
+.row input[type="text"] {
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    color: #212529;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    width: 100%;
+}
+
+/* Margin between form rows */
+.row {
+    margin-bottom: 15px;
+}
+
+/* Tab Navigation */
+.nav-tabs-bordered .nav-link {
+    border: none;
+    color: #6c757d;
+    font-family: "Plus Jakarta Sans";
+}
+
+.nav-tabs-bordered .nav-link.active {
+    color: #3A855D;
+    border-bottom: 2px solid #3A855D;
+    background: none;
+    font-family: "Plus Jakarta Sans";
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+/* Save Changes Button */
+.text-center button {
+    background-color: #3A855D;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.text-center button:hover {
+    background-color: #3A855D;
+}
+
+@media (max-width: 991.98px) {
+    .map-modal {
+        display: none;
+        /* Ensure modal is visible on mobile */
+        position: fixed;
+        /* Floating effect */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* Center modal */
+        width: 100%;
+        /* Adjust width */
+        max-width: 500px;
+        /* Maximum width */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Overlay background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Add shadow for better visibility */
+        padding: 20px;
+        /* Padding around modal content */
+        border-radius: 10px;
+        /* Rounded corners */
+    }
+
+    .map-modal-content {
+        background-color: #fefefe;
+        padding: 20px;
+        border: 1px solid #888;
+        text-align: center;
+        width: 100%;
+        /* Full width of the modal */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Add shadow to modal content */
+    }
+
+    .close-btn {
+        font-size: 20px;
+        /* Adjust close button size */
+    }
+
+    #map {
+        height: 300px;
+        /* Fixed height for the map on mobile */
+        width: 100%;
+        /* Full width of the modal */
+    }
+
+}
+

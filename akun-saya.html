@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akun Saya
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="src/Icon/logo-white.svg">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="ResQBites.css">
+    <link rel="stylesheet" href="src/css/akun-saya.css">
+</head>
+
+<body>
+    <section id="nav">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="src/Icon/Logo.svg" alt=""></a>
+                <div class="navbar-brand2">ResQBites</div>
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="margin-right: -20px;">
+                    <img src="src/Icon/burgernav.svg" alt="">
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <div class="offcanvas-img">
+                            <img src="src/Icon/logo-white.svg" alt="">
+                        </div>
+                        <button type="button" class="btn-close btn-close-white shadow-none border-0"
+                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body text-center">
+                        <ul class="navbar-nav justify-content-end align-items-center flex-grow-1 pe-lg-3">
+                            <li class="nav-item pe-lg-4">
+                                <a class="nav-link" href="MenuToko.html">Menu Produk</a>
+                            </li>
+                            <li class="nav-item pe-lg-4">
+                                <a class="nav-link" href="index.html">Tentang Kami</a>
+                            </li>
+                            <li class="nav-item pe-lg-4">
+                                <a class="nav-link" href="Kemitraan.html">Kemitraan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link login-btn" href="Login.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <div class="sacrificial-afternav">
+
+    </div>
+
+    <div class="icon-tittle judul-profile-title my-3 container d-flex align-items-center gap-3">
+        <img src="src/Icon/back-button.svg" alt="">
+        Profile Saya
+    </div>
+
+    <section id="profile-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+                    <div class="left-card">
+                        <div class="profile-body pt-4 d-flex flex-column align-items-center">
+                            <img src="assets/img/logo-ekambi.svg" alt="Profile" class="rounded-circle">
+                            <h1 class="profile-title">Rasyaad Panggabean</h2>
+                                <h1 class="profile-email">acadaselole@gmail.com</h3>
+                        </div>
+                    </div>
+                    <div class="left-card mt-3">
+                        <div class="metode-title mb-3">
+                            Alamat Pengiriman
+                        </div>
+                        <div id="address-display" class="ringkasan-text">
+                            -
+                        </div>
+                        <div class="product-button mt-3">
+                            <button id="change-address-btn" class="btn btn-primary">Ganti Alamat</button>
+                        </div>
+                    </div>
+                    <!-- Pop-up Modal -->
+                    <div id="map-modal" class="map-modal">
+                        <div class="map-modal-content">
+                            <span id="close-btn" class="close-btn">&times;</span>
+                            <div id="map" style="height: 300px;"></div>
+                            <button id="locate-me-btn" class="btn btn-info mt-3">Cari Lokasi Anda</button>
+                            <button id="confirm-address-btn" class="btn btn-success mt-3">Konfirmasi Alamat</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8 mt-3 mt-lg-0">
+                    <div class="right-card">
+                        <div class="card-body pt-3">
+                            <!-- Bordered Tabs -->
+                            <ul class="nav nav-tabs nav-tabs-bordered">
+                                <li class="nav-item">
+                                    <button class="nav-link active" data-bs-toggle="tab"
+                                        data-bs-target="#profile-overview">Overview</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit
+                                        Profile</button>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content pt-2">
+                                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                                    <h5 class="card-title">Profile Details</h5>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Nama Lengkap</div>
+                                        <div class="col-lg-9 col-md-8">Faisal Kiky</div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Email</div>
+                                        <div class="col-lg-9 col-md-8">faisal@ekambi.com</div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Nomor HP</div>
+                                        <div class="col-lg-9 col-md-8">081234567890</div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Password</div>
+                                        <div class="col-lg-9 col-md-8">kontolebapakkegede</div>
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+
+                                    <!-- Profile Edit Form -->
+                                    <form>
+                                        <div class="row mb-3">
+                                            <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile
+                                                Image</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <img src="assets/img/logo-ekambi.svg" alt="Profile">
+                                                <div class="pt-2">
+                                                    <a href="#" class="btn btn-primary btn-sm"
+                                                        title="Upload new profile image"><i
+                                                            class="bi bi-upload"></i></a>
+                                                    <a href="#" class="btn btn-danger btn-sm"
+                                                        title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nama Lengkap</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="fullName" type="text" class="form-control" id="fullName"
+                                                    value="Faisal Kiky">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="company" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="company" type="text" class="form-control" id="company"
+                                                    value="faisal@ekambi.com" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="Job" class="col-md-4 col-lg-3 col-form-label">Nomor HP</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="job" type="text" class="form-control" id="Job"
+                                                    value="081234567890">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="Country" class="col-md-4 col-lg-3 col-form-label">Password</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="country" type="text" class="form-control" id="Country"
+                                                    value="kontolebapakkegede" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                                        </div>
+                                    </form><!-- End Profile Edit Form -->
+                                </div>
+                            </div><!-- End Bordered Tabs -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <section class="white-footer container px-2">
+            <div class="brand-name-nav d-flex justify-content-between align-items-start align-items-lg-center">
+                <div class="brand-name">
+                    <img src="src/Icon/logo-withname.svg" alt="">
+                </div>
+                <div class="footer-nav gap-5 d-lg-flex d-block">
+                    <a class="d-lg-flex d-block" href="MenuToko.html">Menu Produk</a>
+                    <a class="d-lg-flex d-block mt-4 mt-lg-0" href="HomePage.html">Tentang Kami</a>
+                    <a class="d-lg-flex d-block mt-4 mt-lg-0" href="kemitraan.html">Kemitraan</a>
+                </div>
+            </div>
+            <div class="social-media-logo gap-4 d-flex mt-5 mt-lg-2 justify-content-lg-end">
+                <img src="src/Icon/instagram.svg" alt="">
+                <img src="src/Icon/twitter.svg" alt="">
+                <img src="src/Icon/youtube.svg" alt="">
+            </div>
+        </section>
+
+        <section class="green-remark">
+            <div class="remark container">
+                © 2024 - Tim ResQBites
+            </div>
+        </section>
+    </footer>
+
+    <script src=" https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="src/js/script.js"></script>
+
+</body>
