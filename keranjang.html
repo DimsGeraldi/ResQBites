@@ -205,7 +205,7 @@
 							-
 						</div>
 						<div class="product-button mt-3">
-							<button id="change-address-btn" class="btn btn-primary">Ganti Alamat</button>
+							<button class="btn btn-primary" onclick="redirectToAccountPage()">Ganti Alamat</button>
 						</div>
 					</div>
 					<div id="pick-up" class="left-cart mt-3">
@@ -214,59 +214,6 @@
 						</div>
 						<div class="ringkasan-text">
 							Jalan Pekayon 5 Rt.4 Rw. 1 Jakarta Selatan
-						</div>
-					</div>
-					<div id="address-modal" class="modal fade" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="addressModalLabel">Ganti Alamat</h5>
-									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
-									<form id="address-form" class="form-modal">
-										<div class="mb-3">
-											<label for="street" class="form-label">Jalan</label>
-											<input type="text" class="form-control" id="street" required>
-										</div>
-										<div class="mb-3">
-											<label for="rt" class="form-label">RT</label>
-											<input type="text" class="form-control" id="rt" required>
-										</div>
-										<div class="mb-3">
-											<label for="rw" class="form-label">RW</label>
-											<input type="text" class="form-control" id="rw" required>
-										</div>
-										<div class="mb-3">
-											<label for="houseNumber" class="form-label">No Rumah</label>
-											<input type="text" class="form-control" id="houseNumber" required>
-										</div>
-										<div class="mb-3">
-											<label for="subdistrict" class="form-label">Kelurahan</label>
-											<input type="text" class="form-control" id="subdistrict" required>
-										</div>
-										<div class="mb-3">
-											<label for="district" class="form-label">Kecamatan</label>
-											<input type="text" class="form-control" id="district" required>
-										</div>
-										<div class="mb-3">
-											<label for="city" class="form-label">Kota</label>
-											<input type="text" class="form-control" id="city" required>
-										</div>
-										<div class="mb-3">
-											<label for="province" class="form-label">Provinsi</label>
-											<input type="text" class="form-control" id="province" required>
-										</div>
-										<div class="mb-3">
-											<label for="postalCode" class="form-label">Kode Pos</label>
-											<input type="text" class="form-control" id="postalCode" required>
-										</div>
-										<div class="text-center">
-											<button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-										</div>
-									</form>
-								</div>
-							</div>
 						</div>
 					</div>
 					<div class="left-cart mt-3">

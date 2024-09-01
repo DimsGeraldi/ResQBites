@@ -1,3 +1,4 @@
+// Function to go back in browser history
 function goBack() {
     window.history.back();
 }
@@ -172,25 +173,40 @@ function hideAddressModal(modal) {
 }
 
 /**
- * Update the address display with the values from the form
+ * Update the address display with the values from the form and save to localStorage
  */
 function updateAddressDisplay() {
-    const street = getFormValue('street');
-    const rt = getFormValue('rt');
-    const rw = getFormValue('rw');
-    const houseNumber = getFormValue('houseNumber');
-    const subdistrict = getFormValue('subdistrict');
-    const district = getFormValue('district');
-    const city = getFormValue('city');
-    const province = getFormValue('province');
-    const postalCode = getFormValue('postalCode');
+    const addressData = {
+        street: getFormValue('street'),
+        rt: getFormValue('rt'),
+        rw: getFormValue('rw'),
+        houseNumber: getFormValue('houseNumber'),
+        subdistrict: getFormValue('subdistrict'),
+        district: getFormValue('district'),
+        city: getFormValue('city'),
+        province: getFormValue('province'),
+        postalCode: getFormValue('postalCode')
+    };
 
+    // Save the address data in localStorage
+    localStorage.setItem('deliveryAddress', JSON.stringify(addressData));
+
+    // Update the address display in the modal
     const addressDisplay = document.getElementById('address-display');
     if (addressDisplay) {
-        addressDisplay.textContent = `${street}, RT ${rt} RW ${rw}, No ${houseNumber}, Kelurahan ${subdistrict}, Kecamatan ${district}, Kota ${city}, Provinsi ${province}, Kode Pos ${postalCode}`;
+        addressDisplay.textContent = formatAddress(addressData);
     } else {
         console.error('Address display element not found.');
     }
+}
+
+/**
+ * Format the address data into a single string
+ * @param {object} addressData - The address data object
+ * @returns {string} - The formatted address string
+ */
+function formatAddress(addressData) {
+    return `${addressData.street}, RT ${addressData.rt} RW ${addressData.rw}, No ${addressData.houseNumber}, Kelurahan ${addressData.subdistrict}, Kecamatan ${addressData.district}, Kota ${addressData.city}, Provinsi ${addressData.province}, Kode Pos ${addressData.postalCode}`;
 }
 
 /**
@@ -203,7 +219,32 @@ function getFormValue(id) {
     return element ? element.value : '';
 }
 
-// Initialize all components
+/**
+ * Redirect to the account page
+ */
+function redirectToAccountPage() {
+    window.location.href = 'akun-saya.html'; // Adjust the URL as needed
+}
+
+/**
+ * Load saved address data from localStorage and display it
+ */
+function loadSavedAddress() {
+    const savedAddress = localStorage.getItem('deliveryAddress');
+    if (savedAddress) {
+        const addressData = JSON.parse(savedAddress);
+        const addressDisplay = document.getElementById('address-display');
+        if (addressDisplay) {
+            addressDisplay.textContent = formatAddress(addressData);
+        } else {
+            console.error('Address display element not found.');
+        }
+    } else {
+        console.error('No address data found in localStorage.');
+    }
+}
+
+// Initialize all components when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     initializeAOS();
     initializeOffcanvas();
@@ -213,4 +254,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeQuantityControls();
     initializeNavShadow();
     initializeAddressModal();
+    loadSavedAddress(); // Load saved address data on page load
 });
