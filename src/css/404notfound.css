@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f8f8f8;
+}
+
+section#error {
+    padding: 60px 0;
+}
+
+.error-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font: 800 200px "Poppins";
+    color: #435334;
+}
+
+.error-description {
+    font: 500 30px "Plus Jakarta Sans";
+    color: #435334;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.back-button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #435334;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: background-color 0.5s ease;
+    font: 500 20px "Poppins";
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: transparent;
+    border-color: #435334;
+    color: #435334;
+}
+
+@media (max-width: 991.98px) {
+    section#error {
+        padding: 40px 0;
+    }
+    
+    h1 {
+        font-size: 140px;
+    }
+
+    .error-description {
+        font-size: 24px;
+    }
+
+    .back-button {
+        font-size: 16px;
+    }
+
+    .back-button:hover {
+        background-color: transparent;
+        border-color: #435334;
+        color: #435334;
+    }
+}
