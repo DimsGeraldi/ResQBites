@@ -79,6 +79,7 @@ input[type="radio"]:checked+label::before {
     font-size: 28px;
     font-weight: bold;
 }
+
 .close-btn:hover,
 .close-btn:focus {
     color: black;
@@ -260,21 +261,34 @@ input[type="checkbox"]:checked:before {
     }
 
     .product-quantity-desktop {
-        display: none;
+        margin-block: 32px !important;
+    }
+
+    .quantity-input span {
+        font-size: 18px !important;
     }
 
     .map-modal {
-        display: none; /* Ensure modal is visible on mobile */
-        position: fixed; /* Floating effect */
+        display: none;
+        /* Ensure modal is visible on mobile */
+        position: fixed;
+        /* Floating effect */
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%); /* Center modal */
-        width: 100%; /* Adjust width */
-        max-width: 500px; /* Maximum width */
-        background-color: rgba(0,0,0,0.4); /* Overlay background */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow for better visibility */
-        padding: 20px; /* Padding around modal content */
-        border-radius: 10px; /* Rounded corners */
+        transform: translate(-50%, -50%);
+        /* Center modal */
+        width: 100%;
+        /* Adjust width */
+        max-width: 500px;
+        /* Maximum width */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Overlay background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Add shadow for better visibility */
+        padding: 20px;
+        /* Padding around modal content */
+        border-radius: 10px;
+        /* Rounded corners */
     }
 
     .map-modal-content {
@@ -282,17 +296,22 @@ input[type="checkbox"]:checked:before {
         padding: 20px;
         border: 1px solid #888;
         text-align: center;
-        width: 100%; /* Full width of the modal */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow to modal content */
+        width: 100%;
+        /* Full width of the modal */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Add shadow to modal content */
     }
 
     .close-btn {
-        font-size: 20px; /* Adjust close button size */
+        font-size: 20px;
+        /* Adjust close button size */
     }
 
     #map {
-        height: 300px; /* Fixed height for the map on mobile */
-        width: 100%; /* Full width of the modal */
+        height: 300px;
+        /* Fixed height for the map on mobile */
+        width: 100%;
+        /* Full width of the modal */
     }
 
 }

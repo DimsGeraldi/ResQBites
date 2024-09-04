@@ -64,57 +64,62 @@
 
 	</div>
 
-	<div class="keranjang-title banner-title my-3 container d-flex align-items-center gap-3">
-		<button onclick="goBack()" class="back-button">
-			<img src="src/Icon/back-button.svg" alt="Back">
-		</button>
-		Keranjang
-	</div>
+	<form>
+		<div class="keranjang-title banner-title my-3 container d-flex align-items-center gap-3">
+			<button onclick="goBack()" class="back-button">
+				<img src="src/Icon/back-button.svg" alt="Back">
+			</button>
+			Keranjang
+		</div>
 
-	<section id="cart-item-price">
-		<div class="container">
-			<div class="row">
-				<div class=" col-12 col-lg-8">
-					<div class="left-cart d-flex align-items-center justify-content-between">
-						<div class="checkbox d-flex align-items-center">
-							<input type="checkbox" id="pilih-semua" name="pilih-semua">
-							<label for="pilih-semua">Pilih Semua</label>
-						</div>
-
-						<div class="hapus-semua d-flex">
-							<a href="">Hapus Semua</a>
-						</div>
-					</div>
-
-					<div class="left-cart mt-3">
-						<div class="d-flex align-items-center justify-content-between mb-5">
-							<div class="checkbox d-flex align-items-center gap-2">
-								<input type="checkbox" id="toko-ekambi" name="toko-ekambi">
-								<label for="toko-ekambi">Toko Roti Ekambi</label>
+		<section id="cart-item-price">
+			<div class="container">
+				<div class="row">
+					<div class=" col-12 col-lg-8">
+						<div class="left-cart d-flex align-items-center justify-content-between">
+							<div class="checkbox d-flex align-items-center">
+								<input type="checkbox" id="pilih-semua" name="pilih-semua">
+								<label for="pilih-semua">Pilih Semua</label>
 							</div>
 
 							<div class="hapus-semua d-flex">
-								<a href="">Hapus</a>
+								<a href="">Hapus Semua</a>
 							</div>
 						</div>
 
-						<div class="cart-item mt-3">
-							<div class="checkbox d-lg-flex align-items-start justify-content-between">
-								<div class="d-lg-flex">
-									<div class="d-flex align-items-start gap-2">
-										<input class="mt-lg-2 mt-0" type="checkbox" id="roti-kacang" name="roti-kacang">
-										<!-- <label for="roti-kacang">Roti Selai Kacang</label> -->
-										<img class="img-mobile" src="src/img/roti-selai-kacang.svg" alt="">
-									</div>
-									<img class="img-desktop" src="src/img/roti-selai-kacang.svg" alt="">
-									<div>
-										<div class="item-product-name mt-2">
-											Roti Selai Kacang
+						<div class="left-cart mt-3">
+							<div class="d-flex align-items-center justify-content-between mb-5">
+								<div class="checkbox d-flex align-items-center gap-2">
+									<input type="checkbox" id="toko-ekambi" name="toko-ekambi">
+									<label for="toko-ekambi">Toko Roti Ekambi</label>
+								</div>
+
+								<div class="hapus-semua d-flex">
+									<a href="">Hapus</a>
+								</div>
+							</div>
+
+							<div class="cart-item mt-3">
+								<div class="checkbox d-lg-flex align-items-start justify-content-between">
+									<div class="d-lg-flex">
+										<div class="d-flex align-items-start gap-2">
+											<input class="mt-lg-2 mt-0" type="checkbox" id="roti-kacang"
+												name="roti-kacang">
+											<!-- <label for="roti-kacang">Roti Selai Kacang</label> -->
+											<img class="img-mobile" src="src/img/roti-selai-kacang.svg" alt="">
 										</div>
-										<div class="item-product-price-mobile mt-1 d-flex justify-content-between mb-4">
-											Rp25.000
-											<div class="product-quantity product-quantity-mobile mt-5">
-												<div class="quantity-input d-flex align-items-center">
+										<img class="img-desktop" src="src/img/roti-selai-kacang.svg" alt="">
+										<div>
+											<div class="item-product-name mt-2">
+												Roti Selai Kacang
+											</div>
+											<div
+												class="item-product-price-mobile mt-1 d-flex justify-content-between mb-4">
+												Rp25.000
+											</div>
+											<div class="product-quantity product-quantity-desktop mt-5">
+												<div
+													class="quantity-input d-flex align-items-center justify-content-end justify-content-lg-start">
 													<span class="minus-quantity"
 														onclick="decreaseQuantity(this)">-</span>
 													<span class="num-quantity">1</span>
@@ -123,41 +128,38 @@
 												</div>
 											</div>
 										</div>
-										<div class="product-quantity product-quantity-desktop mt-5">
-											<div class="quantity-input d-flex align-items-center">
-												<span class="minus-quantity" onclick="decreaseQuantity(this)">-</span>
-												<span class="num-quantity">1</span>
-												<span class="plus-quantity" onclick="increaseQuantity(this)">+</span>
-											</div>
-										</div>
 									</div>
-								</div>
-								<div class="item-product-price">
-									Rp25.000
+									<div class="item-product-price">
+										Rp25.000
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<span class="line-break">
-						</span>
+							<span class="line-break">
+							</span>
 
-						<div class="cart-item mt-3">
-							<div class="checkbox d-lg-flex align-items-start justify-content-between">
-								<div class="d-lg-flex">
-									<div class="d-flex align-items-start gap-2">
-										<input class="mt-lg-2 mt-0" type="checkbox" id="roti-kacang" name="roti-kacang">
-										<!-- <label for="roti-kacang">Roti Selai Kacang</label> -->
-										<img class="img-mobile" src="src/img/roti-selai-kacang.svg" alt="">
-									</div>
-									<img class="img-desktop" src="src/img/roti-selai-kacang.svg" alt="">
-									<div>
-										<div class="item-product-name mt-2">
-											Roti Selai Kacang
+							<div class="cart-item mt-3">
+								<div class="checkbox d-lg-flex align-items-start justify-content-between">
+									<div class="d-lg-flex">
+										<div class="d-flex align-items-start gap-2">
+											<input class="mt-lg-2 mt-0" type="checkbox" id="roti-kacang"
+												name="roti-kacang">
+											<!-- <label for="roti-kacang">Roti Selai Kacang</label> -->
+											<img class="img-mobile" src="src/img/roti-selai-kacang.svg" alt="">
 										</div>
-										<div class="item-product-price-mobile mt-1 d-flex justify-content-between mb-4">
-											Rp25.000
-											<div class="product-quantity product-quantity-mobile mt-5">
-												<div class="quantity-input d-flex align-items-center">
+										<img class="img-desktop" src="src/img/roti-selai-kacang.svg" alt="">
+										<div>
+											<div class="item-product-name mt-2">
+												Roti Selai Kacang
+											</div>
+											<div
+												class="item-product-price-mobile mt-1 d-flex justify-content-between mb-4">
+												Rp25.000
+
+											</div>
+											<div class="product-quantity product-quantity-desktop mt-5">
+												<div
+													class="quantity-input d-flex align-items-center justify-content-end justify-content-lg-start">
 													<span class="minus-quantity"
 														onclick="decreaseQuantity(this)">-</span>
 													<span class="num-quantity">1</span>
@@ -166,116 +168,109 @@
 												</div>
 											</div>
 										</div>
-										<div class="product-quantity product-quantity-desktop mt-5">
-											<div class="quantity-input d-flex align-items-center">
-												<span class="minus-quantity" onclick="decreaseQuantity(this)">-</span>
-												<span class="num-quantity">1</span>
-												<span class="plus-quantity" onclick="increaseQuantity(this)">+</span>
-											</div>
-										</div>
 									</div>
-								</div>
-								<div class="item-product-price">
-									Rp25.000
+									<div class="item-product-price">
+										Rp25.000
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-12 col-lg-4 mt-4 mt-lg-0">
-					<div class="left-cart">
-						<div class="metode-title mb-4">
-							Metode Pemesanan
-						</div>
-						<div class="radio d-flex align-items-center my-3 gap-2">
-							<input type="radio" id="delivery-radio" name="metode-pemesanan" value="delivery">
-							<label for="delivery-radio">Delivery</label>
-						</div>
-						<div class="radio d-flex align-items-center my-3 gap-2">
-							<input type="radio" id="pick-up-radio" name="metode-pemesanan" value="pick-up">
-							<label for="pick-up-radio">Pick Up</label>
-						</div>
-					</div>
-					<div id="delivery" class="left-cart mt-3">
-						<div class="metode-title mb-3">
-							Alamat Pengiriman
-						</div>
-						<div id="address-display" class="ringkasan-text">
-							-
-						</div>
-						<div class="product-button mt-3">
-							<button class="btn btn-primary" onclick="redirectToAccountPage()">Ganti Alamat</button>
-						</div>
-					</div>
-					<div id="pick-up" class="left-cart mt-3">
-						<div class="metode-title mb-3">
-							Alamat Toko
-						</div>
-						<div class="ringkasan-text">
-							Jalan Pekayon 5 Rt.4 Rw. 1 Jakarta Selatan
-						</div>
-					</div>
-					<div class="left-cart mt-3">
-						<div class="total-price">
+					<div class="col-12 col-lg-4 mt-4 mt-lg-0">
+						<div class="left-cart">
 							<div class="metode-title mb-4">
-								Pilih Metode Pembayaran
+								Metode Pemesanan
 							</div>
-							<div class="checkbox d-flex align-items-center my-3 gap-2">
-								<input type="checkbox" id="cash-on-delivery" name="cash-on-delivery">
-								<label for="cash-on-delivery">Cash on Delivery</label>
+							<div class="radio d-flex align-items-center my-3 gap-2">
+								<input type="radio" id="delivery-radio" name="metode-pemesanan" value="delivery">
+								<label for="delivery-radio">Delivery</label>
+							</div>
+							<div class="radio d-flex align-items-center my-3 gap-2">
+								<input type="radio" id="pick-up-radio" name="metode-pemesanan" value="pick-up">
+								<label for="pick-up-radio">Pick Up</label>
 							</div>
 						</div>
-					</div>
-					<div class="left-cart ringkasan-belanja mt-3">
-						<div class="metode-title my-3">
-							Ringkasan Belanja
+						<div id="delivery" class="left-cart mt-3">
+							<div class="metode-title mb-3">
+								Alamat Pengiriman
+							</div>
+							<div id="address-display" class="ringkasan-text">
+								-
+							</div>
+							<div class="product-button mt-3">
+								<button class="btn btn-primary" onclick="redirectToAccountPage()">Ganti Alamat</button>
+							</div>
 						</div>
-						<div class="d-flex justify-content-between">
+						<div id="pick-up" class="left-cart mt-3">
+							<div class="metode-title mb-3">
+								Alamat Toko
+							</div>
 							<div class="ringkasan-text">
-								Harga Total Barang
-							</div>
-							<div class="ringkasan-num">
-								Rp50.000
+								Jalan Pekayon 5 Rt.4 Rw. 1 Jakarta Selatan
 							</div>
 						</div>
-						<div class="d-flex justify-content-between mt-3">
-							<div class="ringkasan-text">
-								Biaya Administrasi
-							</div>
-							<div class="ringkasan-num">
-								Rp3.000
-							</div>
-						</div>
-						<div class="d-flex justify-content-between mt-3">
-							<div class="ringkasan-text">
-								Biaya Pengiriman
-							</div>
-							<div class="ringkasan-num">
-								Rp12.000
+						<div class="left-cart mt-3">
+							<div class="total-price">
+								<div class="metode-title mb-4">
+									Pilih Metode Pembayaran
+								</div>
+								<div class="checkbox d-flex align-items-center my-3 gap-2">
+									<input type="checkbox" id="cash-on-delivery" name="cash-on-delivery">
+									<label for="cash-on-delivery">Cash on Delivery</label>
+								</div>
 							</div>
 						</div>
+						<div class="left-cart ringkasan-belanja mt-3">
+							<div class="metode-title my-3">
+								Ringkasan Belanja
+							</div>
+							<div class="d-flex justify-content-between">
+								<div class="ringkasan-text">
+									Harga Total Barang
+								</div>
+								<div class="ringkasan-num">
+									Rp50.000
+								</div>
+							</div>
+							<div class="d-flex justify-content-between mt-3">
+								<div class="ringkasan-text">
+									Biaya Administrasi
+								</div>
+								<div class="ringkasan-num">
+									Rp3.000
+								</div>
+							</div>
+							<div class="d-flex justify-content-between mt-3">
+								<div class="ringkasan-text">
+									Biaya Pengiriman
+								</div>
+								<div class="ringkasan-num">
+									Rp12.000
+								</div>
+							</div>
 
-						<span class="line-break my-4"></span>
+							<span class="line-break my-4"></span>
 
-						<div class="d-flex justify-content-between">
-							<div class="metode-title">
-								Total
+							<div class="d-flex justify-content-between">
+								<div class="metode-title">
+									Total
+								</div>
+								<div class="ringkasan-num-total">
+									Rp50.000
+								</div>
 							</div>
-							<div class="ringkasan-num-total">
-								Rp50.000
-							</div>
-						</div>
 
-						<div class="product-button mt-3"  onclick="location.href='pesanan-saya.html';" style="cursor: pointer;">
-							<button class="btn btn-primary">Buat Pesanan</button>
+							<div class="product-button mt-3" onclick="location.href='pesanan-saya.html';"
+								style="cursor: pointer;">
+								<button class="btn btn-primary">Buat Pesanan</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-
+		</section>
+	</form>
 	<footer>
 		<section class="white-footer container px-2">
 			<div class="brand-name-nav d-flex justify-content-between align-items-start align-items-lg-center">
@@ -289,7 +284,8 @@
 				</div>
 			</div>
 			<div class="social-media-logo gap-4 d-flex mt-5 mt-lg-2 justify-content-lg-end">
-				<a href="https://www.instagram.com/resqbites.id?igsh=dWs5aDNjbGcxZDFn"><img src="src/Icon/instagram.svg" alt="" /></a>
+				<a href="https://www.instagram.com/resqbites.id?igsh=dWs5aDNjbGcxZDFn"><img src="src/Icon/instagram.svg"
+						alt="" /></a>
 				<img src="src/Icon/twitter.svg" alt="">
 				<img src="src/Icon/youtube.svg" alt="">
 			</div>
