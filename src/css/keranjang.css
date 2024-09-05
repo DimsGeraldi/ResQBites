@@ -233,6 +233,27 @@ input[type="checkbox"]:checked:before {
     line-height: normal;
 }
 
+.empty-cart img {
+    width: 60%;
+}
+
+.empty-banner {
+    margin: 10px;
+}
+
+.empty-text {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.empty-cart {
+    padding-block: 32px;
+}
+
 @media (max-width: 991.98px) {
     .keranjang-title img {
         width: 40px;
@@ -314,6 +335,17 @@ input[type="checkbox"]:checked:before {
         /* Full width of the modal */
     }
 
+    .empty-cart img {
+        width: 90%;
+    }
+
+    .empty-banner {
+        margin: 4px;
+    }
+
+    .empty-text {
+        font-size: 18px;
+    }
 }
 
 @media (min-width: 992px) {
